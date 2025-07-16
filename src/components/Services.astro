@@ -1,0 +1,376 @@
+---
+// Services component for Raul's Party Rental
+---
+
+<section class="services">
+  <div class="services-container">
+    <div class="services-header">
+      <h2 class="services-title">Party Rentals for Any Occasion</h2>
+      <p class="services-subtitle">
+        Everything you need to make your event a success
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Chair Card -->
+      <div class="service-card">
+        <div class="card-image">
+          <div class="card-icon">🪑</div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Chairs</h3>
+          <p class="card-description">
+            Comfortable seating for all your guests
+          </p>
+          <div class="card-price">From $2</div>
+          <a href="/inventory#chairs" class="card-link">View Details</a>
+        </div>
+      </div>
+
+      <!-- Table Card -->
+      <div class="service-card">
+        <div class="card-image">
+          <div class="card-icon">🪑</div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Tables</h3>
+          <p class="card-description">Perfect tables for dining and displays</p>
+          <div class="card-price">From $15</div>
+          <a href="/inventory#tables" class="card-link">View Details</a>
+        </div>
+      </div>
+
+      <!-- Jumper Card -->
+      <div class="service-card">
+        <div class="card-image">
+          <div class="card-icon">🎈</div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Jumpers</h3>
+          <p class="card-description">Fun inflatable jumpers for kids</p>
+          <div class="card-price">From $150</div>
+          <a href="/inventory#jumpers" class="card-link">View Details</a>
+        </div>
+      </div>
+
+      <!-- Bull Ride Card -->
+      <div class="service-card">
+        <div class="card-image">
+          <div class="card-icon">🐂</div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Bull Rides</h3>
+          <p class="card-description">
+            Mechanical bull for adult entertainment
+          </p>
+          <div class="card-price">From $300</div>
+          <a href="/inventory#bull-rides" class="card-link">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  }
+
+  .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .services-title {
+    font-family: "Lora", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+  }
+
+  .services-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .card-image {
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23dots)"/></svg>');
+    opacity: 0.3;
+  }
+
+  .card-icon {
+    font-size: 4rem;
+    color: white;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover .card-icon {
+    transform: scale(1.1);
+  }
+
+  .card-content {
+    padding: 2rem;
+  }
+
+  .card-title {
+    font-family: "Lora", serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+  }
+
+  .card-description {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+  }
+
+  .card-price {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #28a745;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .card-link {
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #667eea;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .card-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #667eea;
+    transition: width 0.3s ease;
+  }
+
+  .card-link:hover {
+    color: #764ba2;
+  }
+
+  .card-link:hover::after {
+    width: 100%;
+  }
+
+  /* Responsive Design */
+
+  /* Huge Monitors (1920px and above) */
+  @media (min-width: 1920px) {
+    .services-container {
+      max-width: 1400px;
+    }
+
+    .services-title {
+      font-size: 3rem;
+    }
+
+    .services-subtitle {
+      font-size: 1.2rem;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+    }
+
+    .card-content {
+      padding: 2.5rem;
+    }
+
+    .card-title {
+      font-size: 1.6rem;
+    }
+  }
+
+  /* Normal Laptops (1024px - 1919px) */
+  @media (max-width: 1919px) and (min-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  /* Tablets (768px - 1023px) */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .services {
+      padding: 4rem 0;
+    }
+
+    .services-title {
+      font-size: 2.2rem;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+  }
+
+  /* Mobile (up to 767px) */
+  @media (max-width: 767px) {
+    .services {
+      padding: 3rem 0;
+    }
+
+    .services-container {
+      padding: 0 1rem;
+    }
+
+    .services-title {
+      font-size: 2rem;
+    }
+
+    .services-subtitle {
+      font-size: 1rem;
+    }
+
+    .services-header {
+      margin-bottom: 3rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .card-image {
+      height: 180px;
+    }
+
+    .card-icon {
+      font-size: 3.5rem;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Small Mobile (up to 480px) */
+  @media (max-width: 480px) {
+    .services {
+      padding: 2rem 0;
+    }
+
+    .services-title {
+      font-size: 1.8rem;
+    }
+
+    .services-subtitle {
+      font-size: 0.9rem;
+    }
+
+    .card-image {
+      height: 160px;
+    }
+
+    .card-icon {
+      font-size: 3rem;
+    }
+
+    .card-content {
+      padding: 1.25rem;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+    }
+
+    .card-description {
+      font-size: 0.9rem;
+    }
+  }
+</style>
