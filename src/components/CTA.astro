@@ -1,0 +1,402 @@
+---
+// CTA component for Raul's Party Rental
+---
+
+<section class="cta">
+  <div class="cta-container">
+    <div class="cta-content">
+      <h2 class="cta-headline">Ready to Make Your Event Unforgettable?</h2>
+      <p class="cta-copy">
+        Don't wait until the last minute! Book your party rentals today and
+        secure the best equipment for your special day.
+      </p>
+
+      <div class="cta-contact-info">
+        <span class="contact-item">📞 (555) 123-4567</span>
+        <span class="contact-item">📧 info@raulspartyrental.com</span>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="tel:+15551234567" class="cta-button cta-primary">
+          <span class="button-icon">📞</span>
+          Call Now
+        </a>
+        <a href="sms:+15551234567" class="cta-button cta-secondary">
+          <span class="button-icon">💬</span>
+          Text Us
+        </a>
+        <a href="/inventory" class="cta-button cta-secondary">
+          <span class="button-icon">📋</span>
+          View Inventory
+        </a>
+        <a href="/contact" class="cta-button cta-secondary">
+          <span class="button-icon">✉️</span>
+          Contact Form
+        </a>
+      </div>
+
+      <div class="cta-guarantee">
+        <div class="guarantee-item">
+          <span class="guarantee-icon">⚡</span>
+          <span>Same Day Availability</span>
+        </div>
+        <div class="guarantee-item">
+          <span class="guarantee-icon">🛡️</span>
+          <span>100% Satisfaction Guaranteed</span>
+        </div>
+        <div class="guarantee-item">
+          <span class="guarantee-icon">🚚</span>
+          <span>Free Delivery & Setup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="cta-pattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="30" cy="30" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="15" cy="15" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="45" cy="45" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23cta-pattern)"/></svg>');
+    opacity: 0.3;
+  }
+
+  .cta-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-content {
+    text-align: center;
+    color: white;
+  }
+
+  .cta-headline {
+    font-family: "Lora", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .cta-copy {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 0 0 2rem 0;
+    line-height: 1.6;
+    opacity: 0.95;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-item {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .contact-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    min-width: 160px;
+    justify-content: center;
+  }
+
+  .cta-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  .cta-button:hover::before {
+    left: 100%;
+  }
+
+  .cta-primary {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    border: 2px solid #ff6b6b;
+    transform: scale(1.05);
+  }
+
+  .cta-primary:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+    border-color: #ff5252;
+  }
+
+  .cta-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  .cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .button-icon {
+    font-size: 1.2rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  }
+
+  .cta-guarantee {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .guarantee-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+
+  .guarantee-icon {
+    font-size: 1.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  }
+
+  /* Responsive Design */
+
+  /* Huge Monitors (1920px and above) */
+  @media (min-width: 1920px) {
+    .cta-container {
+      max-width: 1200px;
+    }
+
+    .cta-headline {
+      font-size: 3.5rem;
+    }
+
+    .cta-copy {
+      font-size: 1.4rem;
+    }
+
+    .cta-buttons {
+      gap: 2rem;
+    }
+
+    .cta-button {
+      padding: 1.5rem 3rem;
+      font-size: 1.2rem;
+      min-width: 180px;
+    }
+  }
+
+  /* Normal Laptops (1024px - 1919px) */
+  @media (max-width: 1919px) and (min-width: 1024px) {
+    .cta-headline {
+      font-size: 3rem;
+    }
+
+    .cta-copy {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Tablets (768px - 1023px) */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .cta {
+      padding: 4rem 0;
+    }
+
+    .cta-headline {
+      font-size: 2.5rem;
+    }
+
+    .cta-copy {
+      font-size: 1.2rem;
+    }
+
+    .cta-contact-info {
+      gap: 1.5rem;
+    }
+
+    .cta-buttons {
+      gap: 1rem;
+    }
+
+    .cta-button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      min-width: 140px;
+    }
+
+    .cta-guarantee {
+      gap: 2rem;
+    }
+  }
+
+  /* Mobile (up to 767px) */
+  @media (max-width: 767px) {
+    .cta {
+      padding: 3rem 0;
+    }
+
+    .cta-container {
+      padding: 0 1rem;
+    }
+
+    .cta-headline {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-copy {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-contact-info {
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-item {
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      width: 100%;
+      max-width: 280px;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      min-width: auto;
+    }
+
+    .cta-primary {
+      transform: none;
+    }
+
+    .cta-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .cta-guarantee {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .guarantee-item {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Small Mobile (up to 480px) */
+  @media (max-width: 480px) {
+    .cta {
+      padding: 2.5rem 0;
+    }
+
+    .cta-headline {
+      font-size: 1.8rem;
+    }
+
+    .cta-copy {
+      font-size: 1rem;
+    }
+
+    .contact-item {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .cta-button {
+      padding: 0.9rem 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    .button-icon {
+      font-size: 1rem;
+    }
+
+    .guarantee-icon {
+      font-size: 1.2rem;
+    }
+
+    .guarantee-item {
+      font-size: 0.8rem;
+    }
+  }
+</style>

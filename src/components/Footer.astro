@@ -1,0 +1,588 @@
+---
+// Footer component for Raul's Party Rental
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Main Footer Content -->
+    <div class="footer-main">
+      <!-- Business Info Section -->
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img
+            src="/favicon.svg"
+            alt="Raul's Party Rental Logo"
+            class="logo-img"
+          />
+          <span class="logo-text">Raul's Party Rental</span>
+        </div>
+        <p class="footer-description">
+          Making your events unforgettable with quality party rentals,
+          professional service, and competitive pricing.
+        </p>
+        <div class="service-area">
+          <span class="service-icon">📍</span>
+          <span>Serving Lancaster, Palmdale & Surrounding Areas</span>
+        </div>
+      </div>
+
+      <!-- Quick Links Section -->
+      <div class="footer-section">
+        <h3 class="footer-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="/" class="footer-link">Home</a></li>
+          <li><a href="/inventory" class="footer-link">Inventory</a></li>
+          <li><a href="/pricing" class="footer-link">Pricing</a></li>
+          <li><a href="/about" class="footer-link">About</a></li>
+          <li><a href="/contact" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Section -->
+      <div class="footer-section">
+        <h3 class="footer-title">Our Services</h3>
+        <ul class="footer-links">
+          <li>
+            <a href="/inventory#chairs" class="footer-link">Chairs & Tables</a>
+          </li>
+          <li>
+            <a href="/inventory#jumpers" class="footer-link"
+              >Jumpers & Bounce Houses</a
+            >
+          </li>
+          <li>
+            <a href="/inventory#bull-rides" class="footer-link"
+              >Mechanical Bull</a
+            >
+          </li>
+          <li>
+            <a href="/inventory#dance-floors" class="footer-link"
+              >Dance Floors</a
+            >
+          </li>
+          <li>
+            <a href="/inventory#catering" class="footer-link"
+              >Catering Equipment</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="footer-section">
+        <h3 class="footer-title">Contact Us</h3>
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div class="contact-details">
+              <span class="contact-label">Phone</span>
+              <a href="tel:+15551234567" class="contact-link">(555) 123-4567</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div class="contact-details">
+              <span class="contact-label">Email</span>
+              <a href="mailto:info@raulspartyrental.com" class="contact-link"
+                >info@raulspartyrental.com</a
+              >
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div class="contact-details">
+              <span class="contact-label">Address</span>
+              <span class="contact-text"
+                >123 Party Lane, Lancaster, CA 93534</span
+              >
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">⏰</span>
+            <div class="contact-details">
+              <span class="contact-label">Hours</span>
+              <span class="contact-text">Mon-Sat: 8AM-6PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Media Section -->
+    <div class="footer-social">
+      <h3 class="social-title">Follow Us</h3>
+      <div class="social-links">
+        <a
+          href="https://facebook.com/raulspartyrental"
+          class="social-link"
+          aria-label="Facebook"
+        >
+          <span class="social-icon">📘</span>
+        </a>
+        <a
+          href="https://instagram.com/raulspartyrental"
+          class="social-link"
+          aria-label="Instagram"
+        >
+          <span class="social-icon">📷</span>
+        </a>
+        <a
+          href="https://youtube.com/raulspartyrental"
+          class="social-link"
+          aria-label="YouTube"
+        >
+          <span class="social-icon">📺</span>
+        </a>
+        <a
+          href="https://tiktok.com/@raulspartyrental"
+          class="social-link"
+          aria-label="TikTok"
+        >
+          <span class="social-icon">🎵</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          © 2025 Raul's Party Rental. All rights reserved.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="/privacy" class="bottom-link">Privacy Policy</a>
+          <a href="/terms" class="bottom-link">Terms of Service</a>
+          <a href="/sitemap" class="bottom-link">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 4rem 0 0 0;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* Main Footer Content */
+  .footer-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Business Info Section */
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+  }
+
+  .logo-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  .footer-description {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #bdc3c7;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .service-area {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    color: #ecf0f1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+  }
+
+  .service-icon {
+    font-size: 1.1rem;
+  }
+
+  /* Footer Titles */
+  .footer-title {
+    font-family: "Lora", serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    margin: 0 0 1.5rem 0;
+    position: relative;
+  }
+
+  .footer-title::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 1px;
+  }
+
+  /* Footer Links */
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-link {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 0;
+  }
+
+  .footer-link::before {
+    content: "→";
+    position: absolute;
+    left: -1rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #667eea;
+  }
+
+  .footer-link:hover {
+    color: white;
+    padding-left: 1rem;
+  }
+
+  .footer-link:hover::before {
+    opacity: 1;
+  }
+
+  /* Contact Info */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .contact-icon {
+    font-size: 1.2rem;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .contact-label {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #95a5a6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .contact-link {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .contact-link:hover {
+    color: #667eea;
+  }
+
+  .contact-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    color: #ecf0f1;
+    line-height: 1.4;
+  }
+
+  /* Social Media Section */
+  .footer-social {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+  }
+
+  .social-title {
+    font-family: "Lora", serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .social-link:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  }
+
+  .social-icon {
+    font-size: 1.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  }
+
+  /* Bottom Footer */
+  .footer-bottom {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .copyright {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    color: #95a5a6;
+    margin: 0;
+  }
+
+  .footer-bottom-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .bottom-link {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .bottom-link:hover {
+    color: #667eea;
+  }
+
+  /* Responsive Design */
+
+  /* Huge Monitors (1920px and above) */
+  @media (min-width: 1920px) {
+    .footer-container {
+      max-width: 1400px;
+    }
+
+    .footer-main {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4rem;
+    }
+
+    .logo-text {
+      font-size: 1.7rem;
+    }
+
+    .footer-title {
+      font-size: 1.4rem;
+    }
+  }
+
+  /* Normal Laptops (1024px - 1919px) */
+  @media (max-width: 1919px) and (min-width: 1024px) {
+    .footer-main {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+    }
+  }
+
+  /* Tablets (768px - 1023px) */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .footer {
+      padding: 3rem 0 0 0;
+    }
+
+    .footer-main {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    .footer-bottom-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
+
+  /* Mobile (up to 767px) */
+  @media (max-width: 767px) {
+    .footer {
+      padding: 2.5rem 0 0 0;
+    }
+
+    .footer-container {
+      padding: 0 1rem;
+    }
+
+    .footer-main {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .logo-text {
+      font-size: 1.3rem;
+    }
+
+    .footer-title {
+      font-size: 1.2rem;
+    }
+
+    .social-links {
+      gap: 1rem;
+    }
+
+    .social-link {
+      width: 45px;
+      height: 45px;
+    }
+
+    .social-icon {
+      font-size: 1.3rem;
+    }
+
+    .footer-bottom-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    .footer-bottom-links {
+      justify-content: center;
+      gap: 1.5rem;
+    }
+  }
+
+  /* Small Mobile (up to 480px) */
+  @media (max-width: 480px) {
+    .footer {
+      padding: 2rem 0 0 0;
+    }
+
+    .logo-img {
+      width: 35px;
+      height: 35px;
+    }
+
+    .logo-text {
+      font-size: 1.2rem;
+    }
+
+    .footer-description {
+      font-size: 0.9rem;
+    }
+
+    .service-area {
+      font-size: 0.85rem;
+      padding: 0.6rem 0.8rem;
+    }
+
+    .footer-title {
+      font-size: 1.1rem;
+    }
+
+    .footer-link {
+      font-size: 0.9rem;
+    }
+
+    .contact-link,
+    .contact-text {
+      font-size: 0.9rem;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+    }
+
+    .social-icon {
+      font-size: 1.2rem;
+    }
+
+    .copyright {
+      font-size: 0.8rem;
+    }
+
+    .bottom-link {
+      font-size: 0.8rem;
+    }
+
+    .footer-bottom-links {
+      gap: 1rem;
+    }
+  }
+</style>
