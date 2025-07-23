@@ -1,0 +1,571 @@
+---
+// Jumpers Inventory Page
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+// Sample jumper data
+const jumpers = [
+  {
+    id: 1,
+    name: "Princess Castle Jumper",
+    shortDescription: "Perfect for princess-themed parties",
+    ageGroup: "Ages 2-12",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+    capacity: "Up to 8 kids",
+    dimensions: "12' × 12' × 8'",
+    price: "$180/day",
+  },
+  {
+    id: 2,
+    name: "Superhero Adventure Jumper",
+    shortDescription: "Action-packed fun for little heroes",
+    ageGroup: "Ages 3-10",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+    capacity: "Up to 10 kids",
+    dimensions: "15' × 15' × 10'",
+    price: "$200/day",
+  },
+  {
+    id: 3,
+    name: "Jungle Safari Bounce House",
+    shortDescription: "Wild adventure in the jungle",
+    ageGroup: "Ages 2-12",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+    capacity: "Up to 12 kids",
+    dimensions: "16' × 16' × 12'",
+    price: "$220/day",
+  },
+  {
+    id: 4,
+    name: "Space Explorer Jumper",
+    shortDescription: "Blast off to space adventure",
+    ageGroup: "Ages 4-12",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+    capacity: "Up to 8 kids",
+    dimensions: "14' × 14' × 10'",
+    price: "$190/day",
+  },
+  {
+    id: 5,
+    name: "Underwater Ocean Jumper",
+    shortDescription: "Dive into underwater fun",
+    ageGroup: "Ages 2-10",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+    capacity: "Up to 6 kids",
+    dimensions: "12' × 12' × 8'",
+    price: "$170/day",
+  },
+  {
+    id: 6,
+    name: "Dinosaur Adventure Jumper",
+    shortDescription: "Prehistoric fun for dino lovers",
+    ageGroup: "Ages 3-12",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+    capacity: "Up to 10 kids",
+    dimensions: "15' × 15' × 10'",
+    price: "$200/day",
+  },
+];
+---
+
+<Layout>
+  <Header />
+
+  <main class="inventory-page">
+    <!-- Hero Section -->
+    <section class="inventory-hero">
+      <div class="hero-container">
+        <h1 class="hero-title">Jumpers & Bounce Houses</h1>
+        <p class="hero-subtitle">
+          Make your party bounce with our amazing selection of inflatable
+          jumpers!
+        </p>
+      </div>
+    </section>
+
+    <!-- Inventory Grid -->
+    <section class="inventory-section">
+      <div class="container">
+        <div class="inventory-grid">
+          {
+            jumpers.map((jumper) => (
+              <div class="jumper-card" data-jumper-id={jumper.id}>
+                <div class="card-image">
+                  <img src={jumper.image} alt={jumper.name} loading="lazy" />
+                  <div class="card-overlay">
+                    <span class="view-details">View Details</span>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h3 class="jumper-name">{jumper.name}</h3>
+                  <p class="jumper-description">{jumper.shortDescription}</p>
+                  <div class="jumper-details">
+                    <span class="detail-item">
+                      <span class="detail-icon">👥</span>
+                      {jumper.ageGroup}
+                    </span>
+                    <span class="detail-item">
+                      <span class="detail-icon">📏</span>
+                      {jumper.dimensions}
+                    </span>
+                    <span class="detail-item">
+                      <span class="detail-icon">💰</span>
+                      {jumper.price}
+                    </span>
+                  </div>
+                  <a href={`/jumper/${jumper.id}`} class="view-details-btn">
+                    View Details
+                  </a>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="inventory-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Need Help Choosing?</h2>
+          <p>Our team can help you find the perfect jumper for your event!</p>
+          <div class="cta-buttons">
+            <a href="tel:+15551234567" class="cta-btn primary">Call Now</a>
+            <a href="/contact" class="cta-btn secondary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .inventory-page {
+    min-height: 100vh;
+  }
+
+  /* Hero Section */
+  .inventory-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4rem 0;
+    text-align: center;
+    color: white;
+  }
+
+  .hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .hero-title {
+    font-family: "Lora", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* Inventory Section */
+  .inventory-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Jumper Cards */
+  .jumper-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .jumper-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .jumper-card:hover .card-image img {
+    transform: scale(1.05);
+  }
+
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .jumper-card:hover .card-overlay {
+    opacity: 1;
+  }
+
+  .view-details {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid white;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+
+  .jumper-card:hover .view-details {
+    background: white;
+    color: #667eea;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .jumper-name {
+    font-family: "Lora", serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.3;
+  }
+
+  .jumper-description {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+  }
+
+  .jumper-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    color: #495057;
+  }
+
+  .detail-icon {
+    font-size: 1rem;
+  }
+
+  .view-details-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+  }
+
+  .view-details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  }
+
+  /* CTA Section */
+  .inventory-cta {
+    padding: 4rem 0;
+    background: white;
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    font-family: "Lora", serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 1rem 0;
+  }
+
+  .cta-content p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin: 0 0 2rem 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .cta-btn.primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .cta-btn.secondary {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    border: 2px solid #667eea;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  }
+
+  /* Responsive Design */
+
+  /* Huge Monitors (1920px and above) */
+  @media (min-width: 1920px) {
+    .container {
+      max-width: 1400px;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+    }
+
+    .inventory-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+    }
+  }
+
+  /* Normal Laptops (1024px - 1919px) */
+  @media (max-width: 1919px) and (min-width: 1024px) {
+    .inventory-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  /* Tablets (768px - 1023px) */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .inventory-hero {
+      padding: 3rem 0;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .inventory-section {
+      padding: 3rem 0;
+    }
+
+    .inventory-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .cta-content h2 {
+      font-size: 2.2rem;
+    }
+  }
+
+  /* Mobile (up to 767px) */
+  @media (max-width: 767px) {
+    .inventory-hero {
+      padding: 2.5rem 0;
+    }
+
+    .hero-container {
+      padding: 0 1rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .inventory-section {
+      padding: 2.5rem 0;
+    }
+
+    .container {
+      padding: 0 1rem;
+    }
+
+    .inventory-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .card-image {
+      height: 200px;
+    }
+
+    .card-content {
+      padding: 1.25rem;
+    }
+
+    .jumper-name {
+      font-size: 1.3rem;
+    }
+
+    .cta-content h2 {
+      font-size: 2rem;
+    }
+
+    .cta-content p {
+      font-size: 1rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-btn {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+
+  /* Small Mobile (up to 480px) */
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.9rem;
+    }
+
+    .card-image {
+      height: 180px;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .jumper-name {
+      font-size: 1.2rem;
+    }
+
+    .jumper-description {
+      font-size: 0.9rem;
+    }
+
+    .detail-item {
+      font-size: 0.85rem;
+    }
+
+    .view-details-btn {
+      font-size: 0.9rem;
+      padding: 0.6rem 1.2rem;
+    }
+
+    .cta-content h2 {
+      font-size: 1.8rem;
+    }
+
+    .cta-content p {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<script>
+  // Add click handlers for jumper cards
+  document.addEventListener("DOMContentLoaded", function () {
+    const jumperCards = document.querySelectorAll(".jumper-card");
+
+    jumperCards.forEach((card) => {
+      card.addEventListener("click", function (this: HTMLElement, e: Event) {
+        // Don't trigger if clicking on the button
+        const target = e.target as HTMLElement;
+        if (target && target.classList.contains("view-details-btn")) {
+          return;
+        }
+
+        const jumperId = this.getAttribute("data-jumper-id");
+        window.location.href = `/jumper/${jumperId}`;
+      });
+    });
+  });
+</script>

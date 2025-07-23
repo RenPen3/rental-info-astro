@@ -43,12 +43,16 @@
       <!-- Jumper Card -->
       <div class="service-card">
         <div class="card-image">
-          <div class="card-icon">🎈</div>
+          <img
+            class="card-icon"
+            src="https://i.ibb.co/gLG20PJw/jumper3.webp"
+            alt="Jumper One"
+          />
         </div>
         <div class="card-content">
           <h3 class="card-title">Jumpers</h3>
           <p class="card-description">Fun inflatable jumpers for kids</p>
-          <div class="card-price">From $150</div>
+          <div class="card-price">From $85</div>
           <a href="/inventory#jumpers" class="card-link">View Details</a>
         </div>
       </div>
@@ -123,7 +127,7 @@
   }
 
   .service-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-4px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   }
 
@@ -144,12 +148,12 @@
   }
 
   .card-image {
+    position: relative;
     height: 200px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     overflow: hidden;
   }
 
@@ -165,6 +169,7 @@
   }
 
   .card-icon {
+    width: 100%;
     font-size: 4rem;
     color: white;
     position: relative;

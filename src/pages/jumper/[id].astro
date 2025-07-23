@@ -1,0 +1,885 @@
+---
+// Jumper Detail Page
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+// Get the jumper ID from the URL
+const { id } = Astro.params;
+
+// Sample jumper data (in a real app, this would come from a database)
+const jumpers = [
+  {
+    id: 1,
+    name: "Princess Castle Jumper",
+    shortDescription: "Perfect for princess-themed parties",
+    fullDescription:
+      "Transform your party into a magical kingdom with our Princess Castle Jumper! This beautiful inflatable castle features towers, flags, and a royal design that will make every little princess feel like royalty. Perfect for birthday parties, special celebrations, and themed events. The castle includes multiple bounce areas, slides, and climbing elements to keep kids entertained for hours.",
+    ageGroup: "Ages 2-12",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    ],
+    capacity: "Up to 8 kids",
+    dimensions: "12' × 12' × 8'",
+    price: "$180/day",
+    setupTime: "30-45 minutes",
+    powerRequirements: "Standard outlet",
+    safetyFeatures: "Safety netting, soft landing areas, secure anchoring",
+  },
+  {
+    id: 2,
+    name: "Superhero Adventure Jumper",
+    shortDescription: "Action-packed fun for little heroes",
+    fullDescription:
+      "Let your little superheroes save the day in our action-packed Superhero Adventure Jumper! This exciting inflatable features superhero-themed graphics, obstacle courses, and multiple play areas. Kids can climb, slide, bounce, and imagine they're their favorite superheroes. Perfect for action-themed parties and energetic kids who love to move!",
+    ageGroup: "Ages 3-10",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    ],
+    capacity: "Up to 10 kids",
+    dimensions: "15' × 15' × 10'",
+    price: "$200/day",
+    setupTime: "45-60 minutes",
+    powerRequirements: "Standard outlet",
+    safetyFeatures: "Safety netting, soft landing areas, secure anchoring",
+  },
+  {
+    id: 3,
+    name: "Jungle Safari Bounce House",
+    shortDescription: "Wild adventure in the jungle",
+    fullDescription:
+      "Embark on a wild adventure with our Jungle Safari Bounce House! This exciting inflatable features jungle animals, trees, and safari-themed graphics that will transport kids to an exotic jungle. With multiple bounce areas, slides, and climbing elements, this bounce house provides endless entertainment for animal-loving kids.",
+    ageGroup: "Ages 2-12",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    ],
+    capacity: "Up to 12 kids",
+    dimensions: "16' × 16' × 12'",
+    price: "$220/day",
+    setupTime: "45-60 minutes",
+    powerRequirements: "Standard outlet",
+    safetyFeatures: "Safety netting, soft landing areas, secure anchoring",
+  },
+  {
+    id: 4,
+    name: "Space Explorer Jumper",
+    shortDescription: "Blast off to space adventure",
+    fullDescription:
+      "3, 2, 1... Blast off! Our Space Explorer Jumper takes kids on an intergalactic adventure! This space-themed inflatable features planets, stars, rockets, and space graphics that will ignite imaginations. Perfect for space-themed parties and kids who dream of exploring the cosmos.",
+    ageGroup: "Ages 4-12",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    ],
+    capacity: "Up to 8 kids",
+    dimensions: "14' × 14' × 10'",
+    price: "$190/day",
+    setupTime: "30-45 minutes",
+    powerRequirements: "Standard outlet",
+    safetyFeatures: "Safety netting, soft landing areas, secure anchoring",
+  },
+  {
+    id: 5,
+    name: "Underwater Ocean Jumper",
+    shortDescription: "Dive into underwater fun",
+    fullDescription:
+      "Dive into a world of underwater adventure with our Ocean Jumper! This sea-themed inflatable features colorful fish, coral reefs, and ocean graphics that will make kids feel like they're swimming in the deep blue sea. Perfect for ocean-themed parties and water-loving kids.",
+    ageGroup: "Ages 2-10",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    ],
+    capacity: "Up to 6 kids",
+    dimensions: "12' × 12' × 8'",
+    price: "$170/day",
+    setupTime: "30-45 minutes",
+    powerRequirements: "Standard outlet",
+    safetyFeatures: "Safety netting, soft landing areas, secure anchoring",
+  },
+  {
+    id: 6,
+    name: "Dinosaur Adventure Jumper",
+    shortDescription: "Prehistoric fun for dino lovers",
+    fullDescription:
+      "Travel back in time to the prehistoric era with our Dinosaur Adventure Jumper! This exciting inflatable features dinosaurs, volcanoes, and prehistoric graphics that will make kids feel like they're exploring the land before time. Perfect for dinosaur-themed parties and kids who love these ancient creatures.",
+    ageGroup: "Ages 3-12",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    ],
+    capacity: "Up to 10 kids",
+    dimensions: "15' × 15' × 10'",
+    price: "$200/day",
+    setupTime: "45-60 minutes",
+    powerRequirements: "Standard outlet",
+    safetyFeatures: "Safety netting, soft landing areas, secure anchoring",
+  },
+];
+
+// Find the jumper by ID
+const jumper = jumpers.find((j) => j.id === parseInt(id));
+
+// If jumper not found, redirect to inventory
+if (!jumper) {
+  return Astro.redirect("/inventory");
+}
+---
+
+<Layout>
+  <Header />
+
+  <main class="jumper-detail-page">
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+      <div class="container">
+        <nav class="breadcrumb-nav">
+          <a href="/" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="/inventory" class="breadcrumb-link">Inventory</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">{jumper.name}</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Jumper Detail -->
+    <section class="jumper-detail">
+      <div class="container">
+        <div class="detail-grid">
+          <!-- Image Carousel -->
+          <div class="image-section">
+            <div class="carousel">
+              <div class="carousel-main">
+                <img src={jumper.image} alt={jumper.name} id="main-image" />
+                <button class="carousel-btn prev" id="prev-btn">‹</button>
+                <button class="carousel-btn next" id="next-btn">›</button>
+              </div>
+              <div class="carousel-thumbnails">
+                {
+                  jumper.images.map((image, index) => (
+                    <img
+                      src={image}
+                      alt={`${jumper.name} - Image ${index + 1}`}
+                      class="thumbnail"
+                      data-index={index}
+                    />
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+
+          <!-- Jumper Info -->
+          <div class="info-section">
+            <h1 class="jumper-title">{jumper.name}</h1>
+            <p class="jumper-subtitle">{jumper.shortDescription}</p>
+
+            <div class="price-section">
+              <span class="price">{jumper.price}</span>
+              <span class="price-note">+ delivery & setup</span>
+            </div>
+
+            <div class="quick-info">
+              <div class="info-item">
+                <span class="info-icon">👥</span>
+                <div class="info-content">
+                  <span class="info-label">Age Range</span>
+                  <span class="info-value">{jumper.ageGroup}</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">📏</span>
+                <div class="info-content">
+                  <span class="info-label">Dimensions</span>
+                  <span class="info-value">{jumper.dimensions}</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">🚀</span>
+                <div class="info-content">
+                  <span class="info-label">Capacity</span>
+                  <span class="info-value">{jumper.capacity}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="description">
+              <h3>Description</h3>
+              <p>{jumper.fullDescription}</p>
+            </div>
+
+            <div class="specifications">
+              <h3>Specifications</h3>
+              <div class="specs-grid">
+                <div class="spec-item">
+                  <span class="spec-label">Setup Time</span>
+                  <span class="spec-value">{jumper.setupTime}</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Power Requirements</span>
+                  <span class="spec-value">{jumper.powerRequirements}</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Safety Features</span>
+                  <span class="spec-value">{jumper.safetyFeatures}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cta-section">
+              <a href="tel:+15551234567" class="cta-btn primary">
+                <span class="btn-icon">📞</span>
+                Book Now
+              </a>
+              <a href="/contact" class="cta-btn secondary">
+                <span class="btn-icon">✉️</span>
+                Check Availability
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Jumpers -->
+    <section class="related-jumpers">
+      <div class="container">
+        <h2>You Might Also Like</h2>
+        <div class="related-grid">
+          {
+            jumpers
+              .filter((j) => j.id !== jumper.id)
+              .slice(0, 3)
+              .map((relatedJumper) => (
+                <a href={`/jumper/${relatedJumper.id}`} class="related-card">
+                  <img src={relatedJumper.image} alt={relatedJumper.name} />
+                  <div class="related-content">
+                    <h3>{relatedJumper.name}</h3>
+                    <p>{relatedJumper.shortDescription}</p>
+                    <span class="related-price">{relatedJumper.price}</span>
+                  </div>
+                </a>
+              ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .jumper-detail-page {
+    min-height: 100vh;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    background: #f8f9fa;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+  }
+
+  .breadcrumb-link {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .breadcrumb-link:hover {
+    color: #764ba2;
+  }
+
+  .breadcrumb-separator {
+    color: #6c757d;
+  }
+
+  .breadcrumb-current {
+    color: #495057;
+    font-weight: 500;
+  }
+
+  /* Jumper Detail */
+  .jumper-detail {
+    padding: 3rem 0;
+  }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  /* Image Carousel */
+  .carousel {
+    position: relative;
+  }
+
+  .carousel-main {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+
+  .carousel-main img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+
+  .carousel-btn:hover {
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .carousel-btn.prev {
+    left: 1rem;
+  }
+
+  .carousel-btn.next {
+    right: 1rem;
+  }
+
+  .carousel-thumbnails {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .thumbnail {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .thumbnail:hover,
+  .thumbnail.active {
+    border-color: #667eea;
+    transform: scale(1.05);
+  }
+
+  /* Info Section */
+  .jumper-title {
+    font-family: "Lora", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+  }
+
+  .jumper-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin: 0 0 2rem 0;
+  }
+
+  .price-section {
+    margin-bottom: 2rem;
+  }
+
+  .price {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #28a745;
+  }
+
+  .price-note {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-left: 0.5rem;
+  }
+
+  .quick-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .info-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    text-align: center;
+  }
+
+  .info-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-label {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .info-value {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2c3e50;
+  }
+
+  .description {
+    margin-bottom: 2rem;
+  }
+
+  .description h3 {
+    font-family: "Lora", serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 1rem 0;
+  }
+
+  .description p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #495057;
+    margin: 0;
+  }
+
+  .specifications {
+    margin-bottom: 2rem;
+  }
+
+  .specifications h3 {
+    font-family: "Lora", serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 1rem 0;
+  }
+
+  .specs-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+
+  .spec-label {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6c757d;
+  }
+
+  .spec-value {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 160px;
+    justify-content: center;
+  }
+
+  .cta-btn.primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .cta-btn.secondary {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    border: 2px solid #667eea;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  }
+
+  .btn-icon {
+    font-size: 1.1rem;
+  }
+
+  /* Related Jumpers */
+  .related-jumpers {
+    padding: 4rem 0;
+    background: #f8f9fa;
+  }
+
+  .related-jumpers h2 {
+    font-family: "Lora", serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    margin: 0 0 3rem 0;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .related-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .related-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .related-content {
+    padding: 1.5rem;
+  }
+
+  .related-content h3 {
+    font-family: "Lora", serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .related-content p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+  }
+
+  .related-price {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #28a745;
+  }
+
+  /* Responsive Design */
+
+  /* Huge Monitors (1920px and above) */
+  @media (min-width: 1920px) {
+    .container {
+      max-width: 1400px;
+    }
+
+    .detail-grid {
+      gap: 5rem;
+    }
+
+    .jumper-title {
+      font-size: 3rem;
+    }
+
+    .carousel-main img {
+      height: 500px;
+    }
+  }
+
+  /* Normal Laptops (1024px - 1919px) */
+  @media (max-width: 1919px) and (min-width: 1024px) {
+    .detail-grid {
+      gap: 3rem;
+    }
+  }
+
+  /* Tablets (768px - 1023px) */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .jumper-detail {
+      padding: 2rem 0;
+    }
+
+    .detail-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .jumper-title {
+      font-size: 2.2rem;
+    }
+
+    .carousel-main img {
+      height: 350px;
+    }
+
+    .related-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Mobile (up to 767px) */
+  @media (max-width: 767px) {
+    .container {
+      padding: 0 1rem;
+    }
+
+    .jumper-detail {
+      padding: 1.5rem 0;
+    }
+
+    .detail-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .jumper-title {
+      font-size: 2rem;
+    }
+
+    .jumper-subtitle {
+      font-size: 1rem;
+    }
+
+    .carousel-main img {
+      height: 250px;
+    }
+
+    .carousel-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+
+    .thumbnail {
+      width: 60px;
+      height: 45px;
+    }
+
+    .price {
+      font-size: 1.5rem;
+    }
+
+    .quick-info {
+      padding: 1rem;
+    }
+
+    .info-icon {
+      font-size: 1.2rem;
+      width: 30px;
+    }
+
+    .cta-section {
+      flex-direction: column;
+    }
+
+    .cta-btn {
+      width: 100%;
+    }
+
+    .related-jumpers {
+      padding: 2rem 0;
+    }
+
+    .related-jumpers h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  /* Small Mobile (up to 480px) */
+  @media (max-width: 480px) {
+    .jumper-title {
+      font-size: 1.8rem;
+    }
+
+    .jumper-subtitle {
+      font-size: 0.9rem;
+    }
+
+    .carousel-main img {
+      height: 200px;
+    }
+
+    .thumbnail {
+      width: 50px;
+      height: 40px;
+    }
+
+    .price {
+      font-size: 1.3rem;
+    }
+
+    .info-value {
+      font-size: 0.9rem;
+    }
+
+    .description p {
+      font-size: 0.9rem;
+    }
+
+    .spec-label,
+    .spec-value {
+      font-size: 0.8rem;
+    }
+
+    .related-jumpers h2 {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+
+<script>
+  // Carousel functionality
+  document.addEventListener("DOMContentLoaded", function () {
+    const mainImage = document.getElementById("main-image") as HTMLImageElement;
+    const thumbnails = document.querySelectorAll(
+      ".thumbnail"
+    ) as NodeListOf<HTMLImageElement>;
+    const prevBtn = document.getElementById("prev-btn") as HTMLButtonElement;
+    const nextBtn = document.getElementById("next-btn") as HTMLButtonElement;
+
+    let currentIndex = 0;
+    const images = [
+      mainImage.src,
+      ...Array.from(thumbnails).map((thumb) => thumb.src),
+    ];
+
+    function updateImage(index: number) {
+      currentIndex = index;
+      mainImage.src = images[index];
+
+      // Update active thumbnail
+      thumbnails.forEach((thumb, i) => {
+        thumb.classList.toggle("active", i === index);
+      });
+    }
+
+    // Thumbnail click handlers
+    thumbnails.forEach((thumb, index) => {
+      thumb.addEventListener("click", () => updateImage(index));
+    });
+
+    // Navigation button handlers
+    prevBtn.addEventListener("click", () => {
+      const newIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+      updateImage(newIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      const newIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+      updateImage(newIndex);
+    });
+
+    // Set first thumbnail as active
+    if (thumbnails.length > 0) {
+      thumbnails[0].classList.add("active");
+    }
+  });
+</script>
+

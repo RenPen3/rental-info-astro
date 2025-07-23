@@ -7,7 +7,11 @@
     <!-- Logo Section -->
     <div class="logo-section">
       <a href="/" class="logo-link">
-        <img src="/favicon.svg" alt="Rental Info Logo" class="logo" />
+        <img
+          src="https://i.ibb.co/Jws5pxCD/Arielle-s-Party-Rentals-Logo1-OPT.png"
+          alt="Rental Info Logo"
+          class="logo"
+        />
         <span class="logo-text">Arielle's Party Rentals</span>
       </a>
     </div>
@@ -20,6 +24,22 @@
         </li>
         <li class="nav-item">
           <a href="/inventory" class="nav-link">Rentals</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
+              <a href="/rentals/chairs" class="dropdown-link">Chairs</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/rentals/tables" class="dropdown-link">Tables</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/rentals/jumpers" class="dropdown-link">Jumpers</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="/rentals/mechanical-bull" class="dropdown-link"
+                >Mechanical Bull</a
+              >
+            </li>
+          </ul>
         </li>
         <!-- <li class="nav-item">
           <a href="/item-detail" class="nav-link">Each Item Detail</a>
@@ -85,8 +105,8 @@
   }
 
   .logo {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     margin-right: 12px;
     filter: brightness(0) invert(1);
   }
@@ -147,6 +167,81 @@
 
   .nav-link:hover::after {
     width: 80%;
+  }
+
+  /* Dropdown Styles */
+  .nav-item {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    /* transform: translateY(-10px); */
+    transition: all 0.3s ease;
+    z-index: 1001;
+    padding: 0;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    /* transform: translateY(0); */
+  }
+
+  .dropdown-item {
+    list-style: none;
+    margin: 0;
+  }
+
+  .dropdown-link {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: #2c3e50;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .dropdown-link:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    /* transform: translateX(5px); */
+  }
+
+  /* .dropdown-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+  } */
+
+  .dropdown-link:hover::before {
+    transform: scaleY(1);
+  }
+
+  .dropdown-divider {
+    height: 1px;
+    background: #e9ecef;
+    margin: 0.5rem 0;
   }
 
   /* Mobile Menu Button */
@@ -262,6 +357,11 @@
       display: none;
     }
 
+    /* Hide dropdown on mobile */
+    .dropdown-menu {
+      display: none;
+    }
+
     /* Show mobile menu button */
     .mobile-menu-btn {
       display: flex;
@@ -298,6 +398,42 @@
     .nav-section.mobile-open .nav-link:hover {
       background-color: rgba(255, 255, 255, 0.1);
       transform: none;
+    }
+
+    /* Mobile dropdown styles */
+    .nav-section.mobile-open .dropdown-menu {
+      display: block;
+      position: static;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      margin-top: 0.5rem;
+      margin-left: 1rem;
+      padding: 0.5rem 0;
+    }
+
+    .nav-section.mobile-open .dropdown-item {
+      margin: 0;
+    }
+
+    .nav-section.mobile-open .dropdown-link {
+      color: white;
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-section.mobile-open .dropdown-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: none;
+    }
+
+    .nav-section.mobile-open .dropdown-divider {
+      background: rgba(255, 255, 255, 0.2);
+      margin: 0.25rem 0;
     }
   }
 
