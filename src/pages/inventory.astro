@@ -3,76 +3,6 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-
-// Sample jumper data
-const jumpers = [
-  {
-    id: 1,
-    name: "Princess Castle Jumper",
-    shortDescription: "Perfect for princess-themed parties",
-    ageGroup: "Ages 2-12",
-    image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-    capacity: "Up to 8 kids",
-    dimensions: "12' × 12' × 8'",
-    price: "$180/day",
-  },
-  {
-    id: 2,
-    name: "Superhero Adventure Jumper",
-    shortDescription: "Action-packed fun for little heroes",
-    ageGroup: "Ages 3-10",
-    image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-    capacity: "Up to 10 kids",
-    dimensions: "15' × 15' × 10'",
-    price: "$200/day",
-  },
-  {
-    id: 3,
-    name: "Jungle Safari Bounce House",
-    shortDescription: "Wild adventure in the jungle",
-    ageGroup: "Ages 2-12",
-    image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-    capacity: "Up to 12 kids",
-    dimensions: "16' × 16' × 12'",
-    price: "$220/day",
-  },
-  {
-    id: 4,
-    name: "Space Explorer Jumper",
-    shortDescription: "Blast off to space adventure",
-    ageGroup: "Ages 4-12",
-    image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-    capacity: "Up to 8 kids",
-    dimensions: "14' × 14' × 10'",
-    price: "$190/day",
-  },
-  {
-    id: 5,
-    name: "Underwater Ocean Jumper",
-    shortDescription: "Dive into underwater fun",
-    ageGroup: "Ages 2-10",
-    image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-    capacity: "Up to 6 kids",
-    dimensions: "12' × 12' × 8'",
-    price: "$170/day",
-  },
-  {
-    id: 6,
-    name: "Dinosaur Adventure Jumper",
-    shortDescription: "Prehistoric fun for dino lovers",
-    ageGroup: "Ages 3-12",
-    image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-    capacity: "Up to 10 kids",
-    dimensions: "15' × 15' × 10'",
-    price: "$200/day",
-  },
-];
 ---
 
 <Layout>
@@ -94,39 +24,30 @@ const jumpers = [
     <section class="inventory-section">
       <div class="container">
         <div class="inventory-grid">
-          {
-            jumpers.map((jumper) => (
-              <div class="jumper-card" data-jumper-id={jumper.id}>
-                <div class="card-image">
-                  <img src={jumper.image} alt={jumper.name} loading="lazy" />
-                  <div class="card-overlay">
-                    <span class="view-details">View Details</span>
-                  </div>
-                </div>
-                <div class="card-content">
-                  <h3 class="jumper-name">{jumper.name}</h3>
-                  <p class="jumper-description">{jumper.shortDescription}</p>
-                  <div class="jumper-details">
-                    <span class="detail-item">
-                      <span class="detail-icon">👥</span>
-                      {jumper.ageGroup}
-                    </span>
-                    <span class="detail-item">
-                      <span class="detail-icon">📏</span>
-                      {jumper.dimensions}
-                    </span>
-                    <span class="detail-item">
-                      <span class="detail-icon">💰</span>
-                      {jumper.price}
-                    </span>
-                  </div>
-                  <a href={`/jumper/${jumper.id}`} class="view-details-btn">
-                    View Details
-                  </a>
-                </div>
+          <div class="jumper-card">
+            <div class="card-image">
+              <img loading="lazy" />
+              <div class="card-overlay">
+                <span class="view-details">View Details</span>
               </div>
-            ))
-          }
+            </div>
+            <div class="card-content">
+              <h3 class="jumper-name"></h3>
+              <p class="jumper-description"></p>
+              <div class="jumper-details">
+                <span class="detail-item">
+                  <span class="detail-icon">👥</span>
+                </span>
+                <span class="detail-item">
+                  <span class="detail-icon">📏</span>
+                </span>
+                <span class="detail-item">
+                  <span class="detail-icon">💰</span>
+                </span>
+              </div>
+              <a href="/jumper/" class="view-details-btn"> View Details </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
