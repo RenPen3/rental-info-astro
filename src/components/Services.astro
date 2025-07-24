@@ -15,14 +15,18 @@
       <!-- Chair Card -->
       <div class="service-card">
         <div class="card-image">
-          <div class="card-icon">🪑</div>
+          <img
+            class="card-icon"
+            src="https://i.ibb.co/gLG20PJw/jumper3.webp"
+            alt="Jumper One"
+          />
         </div>
         <div class="card-content">
           <h3 class="card-title">Chairs</h3>
           <p class="card-description">
             Comfortable seating for all your guests
           </p>
-          <div class="card-price">From $2</div>
+          <div class="card-price">From $1</div>
           <a href="/inventory#chairs" class="card-link">View Details</a>
         </div>
       </div>
@@ -30,12 +34,16 @@
       <!-- Table Card -->
       <div class="service-card">
         <div class="card-image">
-          <div class="card-icon">🪑</div>
+          <img
+            class="card-icon"
+            src="https://i.ibb.co/gLG20PJw/jumper3.webp"
+            alt="Jumper One"
+          />
         </div>
         <div class="card-content">
           <h3 class="card-title">Tables</h3>
           <p class="card-description">Perfect tables for dining and displays</p>
-          <div class="card-price">From $15</div>
+          <div class="card-price">From $8</div>
           <a href="/inventory#tables" class="card-link">View Details</a>
         </div>
       </div>
@@ -60,7 +68,11 @@
       <!-- Bull Ride Card -->
       <div class="service-card">
         <div class="card-image">
-          <div class="card-icon">🐂</div>
+          <img
+            class="card-icon"
+            src="https://i.ibb.co/gLG20PJw/jumper3.webp"
+            alt="Jumper One"
+          />
         </div>
         <div class="card-content">
           <h3 class="card-title">Bull Rides</h3>
@@ -118,7 +130,7 @@
 
   .service-card {
     background: white;
-    border-radius: 20px;
+    border-radius: 7px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -127,7 +139,7 @@
   }
 
   .service-card:hover {
-    transform: translateY(-4px);
+    /* transform: translateY(-4px); */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   }
 
@@ -175,7 +187,7 @@
     position: relative;
     z-index: 2;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
   }
 
   .service-card:hover .card-icon {
