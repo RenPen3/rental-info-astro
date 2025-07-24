@@ -4,9 +4,6 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 
-// Get the jumper ID from the URL
-const { id } = Astro.params;
-
 // Sample jumper data (in a real app, this would come from a database)
 const jumpers = [
   {
@@ -137,13 +134,16 @@ const jumpers = [
   },
 ];
 
-// Find the jumper by ID
-const jumper = jumpers.find((j) => j.id === parseInt(id));
-
-// If jumper not found, redirect to inventory
-if (!jumper) {
-  return Astro.redirect("/inventory");
+// Generate static paths for all jumpers
+export async function getStaticPaths() {
+  return jumpers.map((jumper) => ({
+    params: { id: jumper.id.toString() },
+    props: { jumper },
+  }));
 }
+
+// Get the jumper data from props
+const { jumper } = Astro.props;
 ---
 
 <Layout>
@@ -882,3 +882,4 @@ if (!jumper) {
     }
   });
 </script>
+
