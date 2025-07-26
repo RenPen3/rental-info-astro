@@ -1,0 +1,162 @@
+---
+// Testimonials component with static grid layout
+---
+
+<section class="testimonials">
+  <div class="testimonials-container">
+    <h2 class="testimonials-title">What Our Customers Say</h2>
+    <p class="testimonials-subtitle">Real feedback from real events</p>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="quote">
+          "Raul's Party Rental made our daughter's quinceañera absolutely
+          perfect! The bounce house and tables were spotless and the service was
+          incredible."
+        </div>
+        <div class="profile">
+          <img
+            src="https://i.pravatar.cc/60?img=1"
+            alt="Maria Rodriguez"
+            class="profile-img"
+          />
+          <div class="profile-info">
+            <div class="name">Maria Rodriguez</div>
+            <div class="title">Happy Parent</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">
+          "Professional, punctual, and perfect equipment. The mechanical bull
+          was the highlight of our corporate event!"
+        </div>
+        <div class="profile">
+          <img
+            src="https://i.pravatar.cc/60?img=3"
+            alt="John Smith"
+            class="profile-img"
+          />
+          <div class="profile-info">
+            <div class="name">John Smith</div>
+            <div class="title">Event Coordinator</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">
+          "Best party rental service in the valley! Their princess castle jumper
+          made my little girl's birthday party magical."
+        </div>
+        <div class="profile">
+          <img
+            src="https://i.pravatar.cc/60?img=5"
+            alt="Sarah Johnson"
+            class="profile-img"
+          />
+          <div class="profile-info">
+            <div class="name">Sarah Johnson</div>
+            <div class="title">Satisfied Customer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 6rem 0;
+    background: #ffffff;
+  }
+
+  .testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .testimonials-title {
+    font-family: "Lora", serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .testimonials-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .testimonials-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  .testimonial-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .quote {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .profile-info {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .name {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.25rem;
+  }
+
+  .title {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+
+  @media (max-width: 767px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      padding: 1.5rem;
+    }
+  }
+</style>
