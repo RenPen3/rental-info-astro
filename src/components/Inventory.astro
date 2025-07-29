@@ -1,0 +1,313 @@
+---
+// Inventory component with filtering functionality
+---
+
+<section class="inventory">
+  <div class="inventory-container">
+    <h2 class="inventory-title">Our Rental Inventory</h2>
+    <p class="inventory-subtitle">
+      Browse our complete selection of party rental items
+    </p>
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="chair">Chairs</button>
+      <button class="filter-btn" data-category="table">Tables</button>
+      <button class="filter-btn" data-category="jumper">Jumpers</button>
+    </div>
+
+    <div class="inventory-grid" id="inventoryGrid">
+      <!-- Chairs -->
+      <div class="inventory-item" data-category="chair">
+        <div class="item-image">
+          <img src="https://placehold.co/600x600" alt="Plastic Chair" />
+        </div>
+        <div class="item-info">
+          <h3 class="item-name">Plastic Chair</h3>
+          <p class="item-category">Chair</p>
+        </div>
+      </div>
+
+      <div class="inventory-item" data-category="chair">
+        <div class="item-image">
+          <img src="https://placehold.co/600x600" alt="Folding Chair" />
+        </div>
+        <div class="item-info">
+          <h3 class="item-name">Folding Chair</h3>
+          <p class="item-category">Chair</p>
+        </div>
+      </div>
+
+      <div class="inventory-item" data-category="chair">
+        <div class="item-image">
+          <img src="https://placehold.co/600x600" alt="Banquet Chair" />
+        </div>
+        <div class="item-info">
+          <h3 class="item-name">Banquet Chair</h3>
+          <p class="item-category">Chair</p>
+        </div>
+      </div>
+
+      <div class="inventory-item" data-category="chair">
+        <div class="item-image">
+          <img src="https://placehold.co/600x600" alt="Chiavari Chair" />
+        </div>
+        <div class="item-info">
+          <h3 class="item-name">Chiavari Chair</h3>
+          <p class="item-category">Chair</p>
+        </div>
+      </div>
+
+      <!-- Tables -->
+      <div class="inventory-item" data-category="table">
+        <div class="item-image">
+          <img src="https://placehold.co/600x600" alt="Round Table" />
+        </div>
+        <div class="item-info">
+          <h3 class="item-name">Round Table (60")</h3>
+          <p class="item-category">Table</p>
+        </div>
+      </div>
+
+      <div class="inventory-item" data-category="table">
+        <div class="item-image">
+          <img src="https://placehold.co/600x600" alt="Rectangle Table" />
+        </div>
+      </div>
+      <div class="item-info">
+        <h3 class="item-name">Rectangle Table (6')</h3>
+        <p class="item-category">Table</p>
+      </div>
+    </div>
+
+    <div class="inventory-item" data-category="table">
+      <div class="item-image">
+        <img src="https://placehold.co/600x600" alt="Cocktail Table" />
+      </div>
+      <div class="item-info">
+        <h3 class="item-name">Cocktail Table</h3>
+        <p class="item-category">Table</p>
+      </div>
+    </div>
+
+    <div class="inventory-item" data-category="table">
+      <div class="item-image">
+        <img src="https://placehold.co/600x600" alt="Banquet Table" />
+      </div>
+      <div class="item-info">
+        <h3 class="item-name">Banquet Table (8')</h3>
+        <p class="item-category">Table</p>
+      </div>
+    </div>
+
+    <!-- Jumpers -->
+    <div class="inventory-item" data-category="jumper">
+      <div class="item-image">
+        <img src="https://placehold.co/600x600" alt="Bounce House" />
+      </div>
+      <div class="item-info">
+        <h3 class="item-name">Bounce House</h3>
+        <p class="item-category">Jumper</p>
+      </div>
+    </div>
+
+    <src="src="https: placehold.co 600x600"" alt="Princess Castle"
+    ></src="src="https:>
+  </div>
+  <div class="item-info">
+    <h3 class="item-name">Princess Castle</h3>
+    <p class="item-category">Jumper</p>
+  </div>
+</section>
+
+<div class="inventory-item" data-category="jumper">
+  <div class="item-image">
+    <img src="https://placehold.co/1200x400" alt="Mechanical Bull" />
+  </div>
+  <div class="item-info">
+    <h3 class="item-name">Mechanical Bull</h3>
+    <p class="item-category">Jumper</p>
+  </div>
+</div>
+
+<div class="inventory-item" data-category="jumper">
+  <div class="item-image">
+    <img
+      src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Water+Slide"
+      alt="Water Slide"
+    />
+  </div>
+  <div class="item-info">
+    <h3 class="item-name">Water Slide</h3>
+    <p class="item-category">Jumper</p>
+  </div>
+</div>
+
+<style>
+  .inventory {
+    padding: 6rem 0;
+    background: #f8f9fa;
+  }
+
+  .inventory-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .inventory-title {
+    font-family: "Lora", serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .inventory-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #4a90e2;
+    background: transparent;
+    color: #4a90e2;
+    border-radius: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .filter-btn:hover {
+    background: #4a90e2;
+    color: white;
+  }
+
+  .filter-btn.active {
+    background: #4a90e2;
+    color: white;
+  }
+
+  .inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .inventory-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .inventory-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .inventory-item.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+  }
+
+  .item-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .inventory-item:hover .item-image img {
+    transform: scale(1.05);
+  }
+
+  .item-info {
+    padding: 1.5rem;
+  }
+
+  .item-name {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+
+  .item-category {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 768px) {
+    .filter-buttons {
+      gap: 0.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .inventory-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const inventoryItems = document.querySelectorAll(".inventory-item");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const category = this.getAttribute("data-category");
+
+        // Update active button
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        this.classList.add("active");
+
+        // Filter items
+        inventoryItems.forEach((item) => {
+          const itemCategory = item.getAttribute("data-category");
+
+          if (category === "all" || itemCategory === category) {
+            item.classList.remove("hidden");
+          } else {
+            item.classList.add("hidden");
+          }
+        });
+      });
+    });
+  });
+</script>
