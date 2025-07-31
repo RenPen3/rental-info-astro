@@ -1,0 +1,199 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProductLayout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Chair from "../components/Chairs.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<ProductLayout>
+  <Header />
+  <Chair />
+  <Footer />
+</ProductLayout>
+
+<style>
+  .chairs-page {
+    min-height: 100vh;
+  }
+
+  .chairs-hero {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+  }
+
+  .chairs-hero-content h1 {
+    font-family: "Lora", serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .chairs-hero-content p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+
+  .chairs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .chair-section {
+    margin-bottom: 6rem;
+  }
+
+  .chair-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .chair-content.reverse {
+    direction: rtl;
+  }
+
+  .chair-content.reverse > * {
+    direction: ltr;
+  }
+
+  .chair-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .chair-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .chair-details h2 {
+    font-family: "Lora", serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+
+  .chair-description {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #6c757d;
+    margin-bottom: 2rem;
+  }
+
+  .chair-specs {
+    margin-bottom: 2rem;
+  }
+
+  .chair-specs h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+
+  .chair-specs ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .chair-specs li {
+    font-family: "Poppins", sans-serif;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e9ecef;
+    color: #495057;
+  }
+
+  .chair-specs li:last-child {
+    border-bottom: none;
+  }
+
+  .chair-pricing h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+
+  .price-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .price-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #4a90e2;
+  }
+
+  .price {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4a90e2;
+  }
+
+  .period {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+
+  .rent-btn {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  .rent-btn:hover {
+    background: #357abd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .chair-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .chair-content.reverse {
+      direction: ltr;
+    }
+
+    .chairs-hero-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .chair-details h2 {
+      font-size: 2rem;
+    }
+
+    .price-option {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.5rem;
+    }
+  }
+</style>

@@ -1,239 +1,226 @@
----
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
----
-
-<Layout>
-  <Header />
-
-  <main class="chairs-page">
-    <div class="chairs-hero">
-      <div class="chairs-hero-content">
-        <h1>Party Chairs</h1>
-        <p>Quality seating solutions for every event</p>
-      </div>
+<section class="chairs-page">
+  <div class="chairs-hero">
+    <div class="chairs-hero-content">
+      <h1>Party Chairs</h1>
+      <p>Quality seating solutions for every event</p>
     </div>
+  </div>
 
-    <div class="chairs-container">
-      <!-- Plastic Chair -->
-      <section class="chair-section">
-        <div class="chair-content">
-          <div class="chair-image">
-            <img
-              src="https://placehold.co/600x600/4A90E2/FFFFFF?text=Plastic+Chair"
-              alt="Plastic Chair"
-            />
+  <div class="chairs-container">
+    <!-- Plastic Chair -->
+    <section class="chair-section">
+      <div class="chair-content">
+        <div class="chair-image">
+          <img
+            src="https://i.ibb.co/ksVs5wfp/chair-1.webp"
+            alt="Plastic Chair"
+          />
+        </div>
+        <div class="chair-details">
+          <h2>Basic White Folding Chair</h2>
+          <p class="chair-description">
+            Durable and lightweight plastic chairs perfect for outdoor events,
+            backyard parties, and casual gatherings. Easy to clean and stack for
+            storage.
+          </p>
+
+          <div class="chair-specs">
+            <h3>Specifications</h3>
+            <ul>
+              <li><strong>Material:</strong> High-density polyethylene</li>
+              <li><strong>Weight Capacity:</strong> 300 lbs</li>
+              <li><strong>Dimensions:</strong> 18" W × 20" D × 32" H</li>
+              <li><strong>Seat Height:</strong> 18"</li>
+              <li><strong>Weight:</strong> 4.5 lbs</li>
+              <li><strong>Stackable:</strong> Yes (up to 20 chairs)</li>
+            </ul>
           </div>
-          <div class="chair-details">
-            <h2>Plastic Chair</h2>
-            <p class="chair-description">
-              Durable and lightweight plastic chairs perfect for outdoor events,
-              backyard parties, and casual gatherings. Easy to clean and stack
-              for storage.
-            </p>
 
-            <div class="chair-specs">
-              <h3>Specifications</h3>
-              <ul>
-                <li><strong>Material:</strong> High-density polyethylene</li>
-                <li><strong>Weight Capacity:</strong> 300 lbs</li>
-                <li><strong>Dimensions:</strong> 18" W × 20" D × 32" H</li>
-                <li><strong>Seat Height:</strong> 18"</li>
-                <li><strong>Weight:</strong> 4.5 lbs</li>
-                <li><strong>Stackable:</strong> Yes (up to 20 chairs)</li>
-              </ul>
-            </div>
-
-            <div class="chair-pricing">
-              <h3>Pricing</h3>
-              <div class="price-options">
-                <div class="price-option">
-                  <span class="price">$3.50</span>
-                  <span class="period">per chair/day</span>
-                </div>
-                <div class="price-option">
-                  <span class="price">$20.00</span>
-                  <span class="period">per chair/weekend</span>
-                </div>
-                <div class="price-option">
+          <div class="chair-pricing">
+            <h3>Pricing</h3>
+            <div class="price-options">
+              <div class="price-option">
+                <span class="price">$1.00</span>
+                <span class="period">per chair/day</span>
+              </div>
+              <div class="price-option">
+                <span class="price">$1.50</span>
+                <span class="period">per chair/ new chairs</span>
+              </div>
+              <!-- <div class="price-option">
                   <span class="price">$35.00</span>
                   <span class="period">per chair/week</span>
-                </div>
-              </div>
+                </div> -->
             </div>
-
-            <button class="rent-btn">Rent This Chair</button>
           </div>
+
+          <!-- <button class="rent-btn">Rent This Chair</button> -->
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Folding Chair -->
-      <section class="chair-section">
-        <div class="chair-content reverse">
-          <div class="chair-image">
-            <img
-              src="https://placehold.co/600x600/4A90E2/FFFFFF?text=Folding+Chair"
-              alt="Folding Chair"
-            />
+    <!-- Folding Chair -->
+    <section class="chair-section">
+      <div class="chair-content reverse">
+        <div class="chair-image">
+          <img
+            src="https://i.ibb.co/YB3vY7wP/chair-2.webp"
+            alt="Folding Chair"
+          />
+        </div>
+        <div class="chair-details">
+          <h2>White Resin Padded <br />Folding Chair</h2>
+          <p class="chair-description">
+            Classic folding chairs with padded seats for comfort. Perfect for
+            indoor events, meetings, and formal gatherings. Compact when folded.
+          </p>
+
+          <div class="chair-specs">
+            <h3>Specifications</h3>
+            <ul>
+              <li>
+                <strong>Material:</strong> Wooded frame with padded fabric seat
+              </li>
+              <li><strong>Weight Capacity:</strong> 250 lbs</li>
+              <li><strong>Dimensions:</strong> 20" W × 22" D × 33" H</li>
+              <li><strong>Seat Height:</strong> 18.5"</li>
+              <li><strong>Weight:</strong> 8 lbs</li>
+              <li><strong>Folded Size:</strong> 20" W × 4" D × 33" H</li>
+            </ul>
           </div>
-          <div class="chair-details">
-            <h2>Folding Chair</h2>
-            <p class="chair-description">
-              Classic folding chairs with padded seats for comfort. Perfect for
-              indoor events, meetings, and formal gatherings. Compact when
-              folded.
-            </p>
 
-            <div class="chair-specs">
-              <h3>Specifications</h3>
-              <ul>
-                <li>
-                  <strong>Material:</strong> Steel frame with padded fabric seat
-                </li>
-                <li><strong>Weight Capacity:</strong> 250 lbs</li>
-                <li><strong>Dimensions:</strong> 20" W × 22" D × 33" H</li>
-                <li><strong>Seat Height:</strong> 18.5"</li>
-                <li><strong>Weight:</strong> 8 lbs</li>
-                <li><strong>Folded Size:</strong> 20" W × 4" D × 33" H</li>
-              </ul>
-            </div>
-
-            <div class="chair-pricing">
-              <h3>Pricing</h3>
-              <div class="price-options">
-                <div class="price-option">
-                  <span class="price">$4.50</span>
-                  <span class="period">per chair/day</span>
-                </div>
-                <div class="price-option">
+          <div class="chair-pricing">
+            <h3>Pricing</h3>
+            <div class="price-options">
+              <div class="price-option">
+                <span class="price">$2.75</span>
+                <span class="period">per chair/day</span>
+              </div>
+              <!-- <div class="price-option">
                   <span class="price">$25.00</span>
                   <span class="period">per chair/weekend</span>
-                </div>
-                <div class="price-option">
+                </div> -->
+              <!-- <div class="price-option">
                   <span class="price">$45.00</span>
                   <span class="period">per chair/week</span>
-                </div>
+                </div> -->
+            </div>
+          </div>
+
+          <!-- <button class="rent-btn">Rent This Chair</button> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Banquet Chair -->
+    <section class="chair-section">
+      <div class="chair-content">
+        <div class="chair-image">
+          <img
+            src="https://i.ibb.co/rKDf1QnF/chair-6.webp"
+            alt="Banquet Chair"
+          />
+        </div>
+        <div class="chair-details">
+          <h2>Single Throne Gold Chair</h2>
+          <p class="chair-description">
+            Make a statement with our Single Throne Gold Chair — a regal,
+            upholstered banquet chair designed for elegance and comfort. Perfect
+            for weddings, corporate events, and formal occasions.
+          </p>
+
+          <div class="chair-specs">
+            <h3>Specifications</h3>
+            <ul>
+              <li>
+                <strong>Material:</strong> Wood frame with upholstered seat/back
+              </li>
+              <li><strong>Weight Capacity:</strong> 300 lbs</li>
+              <li><strong>Dimensions:</strong> 19" W × 21" D × 34" H</li>
+              <li><strong>Seat Height:</strong> 18"</li>
+              <li><strong>Weight:</strong> 3 lbs</li>
+              <!-- <li><strong>Colors:</strong> Black, White, Gold, Silver</li> -->
+            </ul>
+          </div>
+
+          <div class="chair-pricing">
+            <h3>Pricing</h3>
+            <div class="price-options">
+              <div class="price-option">
+                <span class="price">$100.00</span>
+                <span class="period">per chair/day</span>
+              </div>
+              <!-- <div class="price-option">
+                <span class="price">$35.00</span>
+                <span class="period">per chair/weekend</span>
+              </div> -->
+              <!-- <div class="price-option">
+                <span class="price">$60.00</span>
+                <span class="period">per chair/week</span>
+              </div> -->
+            </div>
+          </div>
+
+          <!-- <button class="rent-btn">Rent This Chair</button> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Chiavari Chair -->
+    <section class="chair-section">
+      <div class="chair-content reverse">
+        <div class="chair-image">
+          <img
+            src="https://placehold.co/600x600/4A90E2/FFFFFF?text=Chiavari+Chair"
+            alt="Chiavari Chair"
+          />
+        </div>
+        <div class="chair-details">
+          <h2>Chiavari Chair</h2>
+          <p class="chair-description">
+            Premium Chiavari chairs with elegant design and comfortable padding.
+            Perfect for upscale events, luxury weddings, and high-end
+            celebrations.
+          </p>
+
+          <div class="chair-specs">
+            <h3>Specifications</h3>
+            <ul>
+              <li>
+                <strong>Material:</strong> Aluminum frame with padded seat
+              </li>
+              <li><strong>Weight Capacity:</strong> 350 lbs</li>
+              <li><strong>Dimensions:</strong> 18" W × 20" D × 35" H</li>
+              <li><strong>Seat Height:</strong> 18.5"</li>
+              <li><strong>Weight:</strong> 9 lbs</li>
+              <li><strong>Colors:</strong> Gold, Silver, Black, White</li>
+            </ul>
+          </div>
+
+          <div class="chair-pricing">
+            <h3>Pricing</h3>
+            <div class="price-options">
+              <div class="price-option">
+                <span class="price">$8.00</span>
+                <span class="period">per chair/day</span>
+              </div>
+              <div class="price-option">
+                <span class="price">$45.00</span>
+                <span class="period">per chair/weekend</span>
+              </div>
+              <div class="price-option">
+                <span class="price">$75.00</span>
+                <span class="period">per chair/week</span>
               </div>
             </div>
-
-            <button class="rent-btn">Rent This Chair</button>
           </div>
+
+          <button class="rent-btn">Rent This Chair</button>
         </div>
-      </section>
-
-      <!-- Banquet Chair -->
-      <section class="chair-section">
-        <div class="chair-content">
-          <div class="chair-image">
-            <img
-              src="https://placehold.co/600x600/4A90E2/FFFFFF?text=Banquet+Chair"
-              alt="Banquet Chair"
-            />
-          </div>
-          <div class="chair-details">
-            <h2>Banquet Chair</h2>
-            <p class="chair-description">
-              Elegant banquet chairs with upholstered seats and backs. Ideal for
-              weddings, corporate events, and formal celebrations. Available in
-              multiple colors.
-            </p>
-
-            <div class="chair-specs">
-              <h3>Specifications</h3>
-              <ul>
-                <li>
-                  <strong>Material:</strong> Wood frame with upholstered seat/back
-                </li>
-                <li><strong>Weight Capacity:</strong> 300 lbs</li>
-                <li><strong>Dimensions:</strong> 19" W × 21" D × 34" H</li>
-                <li><strong>Seat Height:</strong> 18"</li>
-                <li><strong>Weight:</strong> 12 lbs</li>
-                <li><strong>Colors:</strong> Black, White, Gold, Silver</li>
-              </ul>
-            </div>
-
-            <div class="chair-pricing">
-              <h3>Pricing</h3>
-              <div class="price-options">
-                <div class="price-option">
-                  <span class="price">$6.00</span>
-                  <span class="period">per chair/day</span>
-                </div>
-                <div class="price-option">
-                  <span class="price">$35.00</span>
-                  <span class="period">per chair/weekend</span>
-                </div>
-                <div class="price-option">
-                  <span class="price">$60.00</span>
-                  <span class="period">per chair/week</span>
-                </div>
-              </div>
-            </div>
-
-            <button class="rent-btn">Rent This Chair</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Chiavari Chair -->
-      <section class="chair-section">
-        <div class="chair-content reverse">
-          <div class="chair-image">
-            <img
-              src="https://placehold.co/600x600/4A90E2/FFFFFF?text=Chiavari+Chair"
-              alt="Chiavari Chair"
-            />
-          </div>
-          <div class="chair-details">
-            <h2>Chiavari Chair</h2>
-            <p class="chair-description">
-              Premium Chiavari chairs with elegant design and comfortable
-              padding. Perfect for upscale events, luxury weddings, and high-end
-              celebrations.
-            </p>
-
-            <div class="chair-specs">
-              <h3>Specifications</h3>
-              <ul>
-                <li>
-                  <strong>Material:</strong> Aluminum frame with padded seat
-                </li>
-                <li><strong>Weight Capacity:</strong> 350 lbs</li>
-                <li><strong>Dimensions:</strong> 18" W × 20" D × 35" H</li>
-                <li><strong>Seat Height:</strong> 18.5"</li>
-                <li><strong>Weight:</strong> 9 lbs</li>
-                <li><strong>Colors:</strong> Gold, Silver, Black, White</li>
-              </ul>
-            </div>
-
-            <div class="chair-pricing">
-              <h3>Pricing</h3>
-              <div class="price-options">
-                <div class="price-option">
-                  <span class="price">$8.00</span>
-                  <span class="period">per chair/day</span>
-                </div>
-                <div class="price-option">
-                  <span class="price">$45.00</span>
-                  <span class="period">per chair/weekend</span>
-                </div>
-                <div class="price-option">
-                  <span class="price">$75.00</span>
-                  <span class="period">per chair/week</span>
-                </div>
-              </div>
-            </div>
-
-            <button class="rent-btn">Rent This Chair</button>
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <Footer />
-</Layout>
+      </div>
+    </section>
+  </div>
+</section>
 
 <style>
   .chairs-page {
