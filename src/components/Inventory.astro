@@ -4,13 +4,15 @@
 
 <section class="inventory">
   <div class="inventory-container">
-    <h2 class="inventory-title">Our Rental Inventory</h2>
-    <p class="inventory-subtitle">
-      Browse our complete selection of party rental items
-    </p>
+    <div class="inventory-header">
+      <h2 class="inventory-title">Our Rental Inventory</h2>
+      <p class="inventory-subtitle">
+        Browse our complete selection of party rental items
+      </p>
+    </div>
 
     <div class="filter-buttons">
-      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn active" data-category="all">All Items</button>
       <button class="filter-btn" data-category="chair">Chairs</button>
       <button class="filter-btn" data-category="table">Tables</button>
       <button class="filter-btn" data-category="jumper">Jumpers</button>
@@ -73,80 +75,82 @@
         <div class="item-image">
           <img src="https://placehold.co/600x600" alt="Rectangle Table" />
         </div>
+        <div class="item-info">
+          <h3 class="item-name">Rectangle Table (6')</h3>
+          <p class="item-category">Table</p>
+        </div>
       </div>
-      <div class="item-info">
-        <h3 class="item-name">Rectangle Table (6')</h3>
-        <p class="item-category">Table</p>
+
+      <div class="inventory-item" data-category="table">
+        <div class="item-image">
+          <img src="https://placehold.co/600x600" alt="Cocktail Table" />
+        </div>
+        <div class="item-info">
+          <h3 class="item-name">Cocktail Table</h3>
+          <p class="item-category">Table</p>
+        </div>
+      </div>
+
+      <div class="inventory-item" data-category="table">
+        <div class="item-image">
+          <img src="https://placehold.co/600x600" alt="Banquet Table" />
+        </div>
+        <div class="item-info">
+          <h3 class="item-name">Banquet Table (8')</h3>
+          <p class="item-category">Table</p>
+        </div>
+      </div>
+
+      <!-- Jumpers -->
+      <div class="inventory-item" data-category="jumper">
+        <div class="item-image">
+          <img src="https://placehold.co/600x600" alt="Bounce House" />
+        </div>
+        <div class="item-info">
+          <h3 class="item-name">Bounce House</h3>
+          <p class="item-category">Jumper</p>
+        </div>
+      </div>
+
+      <div class="inventory-item" data-category="jumper">
+        <div class="item-image">
+          <img src="https://placehold.co/600x600" alt="Princess Castle" />
+        </div>
+        <div class="item-info">
+          <h3 class="item-name">Princess Castle</h3>
+          <p class="item-category">Jumper</p>
+        </div>
+      </div>
+
+      <div class="inventory-item" data-category="jumper">
+        <div class="item-image">
+          <img src="https://placehold.co/600x600" alt="Mechanical Bull" />
+        </div>
+        <div class="item-info">
+          <h3 class="item-name">Mechanical Bull</h3>
+          <p class="item-category">Jumper</p>
+        </div>
+      </div>
+
+      <div class="inventory-item" data-category="jumper">
+        <div class="item-image">
+          <img src="https://placehold.co/600x600" alt="Water Slide" />
+        </div>
+        <div class="item-info">
+          <h3 class="item-name">Water Slide</h3>
+          <p class="item-category">Jumper</p>
+        </div>
       </div>
     </div>
-
-    <div class="inventory-item" data-category="table">
-      <div class="item-image">
-        <img src="https://placehold.co/600x600" alt="Cocktail Table" />
-      </div>
-      <div class="item-info">
-        <h3 class="item-name">Cocktail Table</h3>
-        <p class="item-category">Table</p>
-      </div>
-    </div>
-
-    <div class="inventory-item" data-category="table">
-      <div class="item-image">
-        <img src="https://placehold.co/600x600" alt="Banquet Table" />
-      </div>
-      <div class="item-info">
-        <h3 class="item-name">Banquet Table (8')</h3>
-        <p class="item-category">Table</p>
-      </div>
-    </div>
-
-    <!-- Jumpers -->
-    <div class="inventory-item" data-category="jumper">
-      <div class="item-image">
-        <img src="https://placehold.co/600x600" alt="Bounce House" />
-      </div>
-      <div class="item-info">
-        <h3 class="item-name">Bounce House</h3>
-        <p class="item-category">Jumper</p>
-      </div>
-    </div>
-
-    <src="src="https: placehold.co 600x600"" alt="Princess Castle"
-    ></src="src="https:>
-  </div>
-  <div class="item-info">
-    <h3 class="item-name">Princess Castle</h3>
-    <p class="item-category">Jumper</p>
   </div>
 </section>
 
-<div class="inventory-item" data-category="jumper">
-  <div class="item-image">
-    <img src="https://placehold.co/1200x400" alt="Mechanical Bull" />
-  </div>
-  <div class="item-info">
-    <h3 class="item-name">Mechanical Bull</h3>
-    <p class="item-category">Jumper</p>
-  </div>
-</div>
-
-<div class="inventory-item" data-category="jumper">
-  <div class="item-image">
-    <img
-      src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Water+Slide"
-      alt="Water Slide"
-    />
-  </div>
-  <div class="item-info">
-    <h3 class="item-name">Water Slide</h3>
-    <p class="item-category">Jumper</p>
-  </div>
-</div>
-
 <style>
+  /* Main Container */
   .inventory {
-    padding: 6rem 0;
-    background: #f8f9fa;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
   }
 
   .inventory-container {
@@ -155,22 +159,31 @@
     padding: 0 2rem;
   }
 
-  .inventory-title {
-    font-family: "Lora", serif;
-    font-size: 2.5rem;
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .inventory-subtitle {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.1rem;
-    color: #6c757d;
+  /* Header Section */
+  .inventory-header {
     text-align: center;
     margin-bottom: 3rem;
   }
 
+  .inventory-title {
+    font-family: "Lora", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .inventory-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Filter Buttons */
   .filter-buttons {
     display: flex;
     justify-content: center;
@@ -180,106 +193,268 @@
   }
 
   .filter-btn {
-    padding: 0.75rem 1.5rem;
+    padding: 0.875rem 1.75rem;
     border: 2px solid #4a90e2;
     background: transparent;
     color: #4a90e2;
-    border-radius: 25px;
+    border-radius: 50px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
+    font-size: 0.95rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .filter-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: left 0.5s;
+  }
+
+  .filter-btn:hover::before {
+    left: 100%;
   }
 
   .filter-btn:hover {
     background: #4a90e2;
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
   }
 
   .filter-btn.active {
     background: #4a90e2;
     color: white;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
   }
 
+  /* Inventory Grid */
   .inventory-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    animation: fadeIn 0.6s ease-out;
   }
 
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Inventory Items */
   .inventory-item {
     background: white;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
     transform: scale(1);
+    cursor: pointer;
   }
 
   .inventory-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   }
 
   .inventory-item.hidden {
     opacity: 0;
     transform: scale(0.8);
     pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  /* Item Image */
   .item-image {
     width: 100%;
-    height: 200px;
+    height: 220px;
     overflow: hidden;
+    position: relative;
   }
 
   .item-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .inventory-item:hover .item-image img {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 
+  /* Item Info */
   .item-info {
     padding: 1.5rem;
   }
 
   .item-name {
     font-family: "Poppins", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: #2c3e50;
     margin-bottom: 0.5rem;
+    line-height: 1.3;
   }
 
   .item-category {
     font-family: "Poppins", sans-serif;
-    font-size: 0.9rem;
-    color: #6c757d;
+    font-size: 0.875rem;
+    color: #4a90e2;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .inventory-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .inventory {
+      padding: 3rem 0;
+    }
+
+    .inventory-title {
+      font-size: 2.5rem;
+    }
+
+    .inventory-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .inventory-grid {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
   }
 
   @media (max-width: 768px) {
+    .inventory-container {
+      padding: 0 1.5rem;
+    }
+
+    .inventory-title {
+      font-size: 2.25rem;
+    }
+
+    .inventory-subtitle {
+      font-size: 1rem;
+    }
+
     .filter-buttons {
-      gap: 0.5rem;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
     }
 
     .filter-btn {
-      padding: 0.5rem 1rem;
+      padding: 0.75rem 1.5rem;
       font-size: 0.9rem;
     }
 
     .inventory-grid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .item-image {
+      height: 200px;
+    }
+
+    .item-info {
+      padding: 1.25rem;
+    }
+
+    .item-name {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .inventory {
+      padding: 2rem 0;
+    }
+
+    .inventory-container {
+      padding: 0 1rem;
+    }
+
+    .inventory-title {
+      font-size: 2rem;
+    }
+
+    .inventory-subtitle {
+      font-size: 0.95rem;
+    }
+
+    .filter-buttons {
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+      padding: 0.625rem 1.25rem;
+      font-size: 0.85rem;
+    }
+
+    .inventory-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .item-image {
+      height: 180px;
+    }
+
+    .item-info {
+      padding: 1rem;
+    }
+
+    .item-name {
+      font-size: 1rem;
+    }
+
+    .item-category {
+      font-size: 0.8rem;
+    }
+  }
+
+  /* Small Mobile */
+  @media (max-width: 360px) {
+    .inventory-title {
+      font-size: 1.75rem;
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+    }
+
+    .item-image {
+      height: 160px;
     }
   }
 </style>
@@ -290,14 +465,14 @@
     const inventoryItems = document.querySelectorAll(".inventory-item");
 
     filterButtons.forEach((button) => {
-      button.addEventListener("click", function () {
-        const category = this.getAttribute("data-category");
+      button.addEventListener("click", () => {
+        const category = button.getAttribute("data-category");
 
         // Update active button
         filterButtons.forEach((btn) => btn.classList.remove("active"));
-        this.classList.add("active");
+        button.classList.add("active");
 
-        // Filter items
+        // Filter items with smooth animation
         inventoryItems.forEach((item) => {
           const itemCategory = item.getAttribute("data-category");
 
@@ -307,6 +482,17 @@
             item.classList.add("hidden");
           }
         });
+      });
+    });
+
+    // Add click handlers for inventory items
+    inventoryItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        const itemName = item.querySelector(".item-name")?.textContent;
+        const itemCategory = item.getAttribute("data-category");
+
+        // You can add navigation logic here
+        console.log(`Clicked: ${itemName} (${itemCategory})`);
       });
     });
   });
