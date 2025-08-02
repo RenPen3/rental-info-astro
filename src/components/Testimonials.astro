@@ -1,67 +1,58 @@
 ---
-// Testimonials component with static grid layout
+const heading = "What Our Customers Say";
+const subTitle = "Real feedback from real events";
+const profiles = [
+  {
+    name: "Maria Rodriguez",
+    occupation: "Happy Parent",
+    imageURL: "https://i.pravatar.cc/60?img=1",
+    alt: "Photograph of Maria Rodriguez",
+    quote:
+      "Raul's Party Rental made our daughter's quinceañera absolutely perfect! The bounce house and tables were spotless and the service was incredible.",
+  },
+  {
+    name: "John Smith",
+    occupation: "Event Coordinator",
+    imageURL: "https://i.pravatar.cc/60?img=3",
+    alt: "Photograph of John Smith",
+    quote:
+      "Professional, punctual, and perfect equipment. The mechanical bull was the highlight of our corporate event!",
+  },
+  {
+    name: "Sarah Johnson",
+    occupation: "Satisfied Customer",
+    imageURL: "https://i.pravatar.cc/60?img=5",
+    alt: "Photograph of Sarah Johnson",
+    quote:
+      "Best party rental service in the valley! Their princess castle jumper made my little girl's birthday party magical.",
+  },
+];
 ---
 
 <section class="testimonials">
   <div class="testimonials-container">
-    <h2 class="testimonials-title">What Our Customers Say</h2>
-    <p class="testimonials-subtitle">Real feedback from real events</p>
+    <h2 class="testimonials-title">{heading}</h2>
+    <p class="testimonials-subtitle">{subTitle}</p>
 
     <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="quote">
-          "Raul's Party Rental made our daughter's quinceañera absolutely
-          perfect! The bounce house and tables were spotless and the service was
-          incredible."
-        </div>
-        <div class="profile">
-          <img
-            src="https://i.pravatar.cc/60?img=1"
-            alt="Maria Rodriguez"
-            class="profile-img"
-          />
-          <div class="profile-info">
-            <div class="name">Maria Rodriguez</div>
-            <div class="title">Happy Parent</div>
+      {
+        profiles.map((profile) => (
+          <div class="testimonial-card">
+            <div class="quote">{profile.quote}</div>
+            <div class="profile">
+              <img
+                src={profile.imageURL}
+                alt={profile.alt}
+                class="profile-img"
+              />
+              <div class="profile-info">
+                <div class="name">{profile.name}</div>
+                <div class="title">{profile.occupation}</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="quote">
-          "Professional, punctual, and perfect equipment. The mechanical bull
-          was the highlight of our corporate event!"
-        </div>
-        <div class="profile">
-          <img
-            src="https://i.pravatar.cc/60?img=3"
-            alt="John Smith"
-            class="profile-img"
-          />
-          <div class="profile-info">
-            <div class="name">John Smith</div>
-            <div class="title">Event Coordinator</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="quote">
-          "Best party rental service in the valley! Their princess castle jumper
-          made my little girl's birthday party magical."
-        </div>
-        <div class="profile">
-          <img
-            src="https://i.pravatar.cc/60?img=5"
-            alt="Sarah Johnson"
-            class="profile-img"
-          />
-          <div class="profile-info">
-            <div class="name">Sarah Johnson</div>
-            <div class="title">Satisfied Customer</div>
-          </div>
-        </div>
-      </div>
+        ))
+      }
     </div>
   </div>
 </section>
