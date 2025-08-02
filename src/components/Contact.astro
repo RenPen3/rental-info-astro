@@ -1,0 +1,370 @@
+---
+// Contact component for Arielle's Party Rentals
+---
+
+<section class="contact-hero">
+  <div class="hero-container">
+    <h1 class="hero-title">Get In Touch</h1>
+    <p class="hero-description">
+      Ready to make your event unforgettable? We're here to help you plan the perfect celebration. Let's start creating memories together.
+    </p>
+  </div>
+</section>
+
+<section class="video-section">
+  <div class="container">
+    <div class="video-content">
+      <div class="video-container">
+        <div class="video-placeholder">
+          <div class="play-button">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="30" fill="rgba(255, 255, 255, 0.9)"/>
+              <path d="M25 20L40 30L25 40V20Z" fill="#4a90e2"/>
+            </svg>
+          </div>
+          <span class="video-label">Watch Our Story</span>
+        </div>
+      </div>
+      <div class="video-text">
+        <h2>Why Choose Arielle's Party Rentals?</h2>
+        <p>
+          With over 5 years of experience serving the Antelope Valley, we've built our reputation on reliability, quality, and exceptional customer service. Our team understands that every event is unique, and we're committed to making your vision come to life.
+        </p>
+        <p>
+          From the initial consultation to the final cleanup, we handle every detail with care. Our extensive inventory of tables, chairs, jumpers, and decor ensures we have everything you need for any type of celebration.
+        </p>
+        <a href="https://calendly.com/ariellespartyrentalsav" target="_blank" class="cta-button cta-primary">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="contact-info">
+  <div class="container">
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="info-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#4a90e2"/>
+          </svg>
+        </div>
+        <h3>Service Area</h3>
+        <p>Lancaster, Palmdale & Surrounding Areas</p>
+      </div>
+      
+      <div class="info-item">
+        <div class="info-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#4a90e2"/>
+          </svg>
+        </div>
+        <h3>Phone</h3>
+        <p>(661) 555-0123</p>
+      </div>
+      
+      <div class="info-item">
+        <div class="info-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#4a90e2"/>
+          </svg>
+        </div>
+        <h3>Email</h3>
+        <p>hello@ariellespartyrentals.com</p>
+      </div>
+      
+      <div class="info-item">
+        <div class="info-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#4a90e2"/>
+          </svg>
+        </div>
+        <h3>Response Time</h3>
+        <p>Within 24 Hours</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Contact Hero Section */
+  .contact-hero {
+    background: linear-gradient(135deg, #f0f8ff 0%, #f5f9ff 100%);
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hero-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%234a90e2" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23hero-pattern)"/></svg>');
+    opacity: 0.3;
+  }
+
+  .hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-title {
+    font-family: "Lora", serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+  }
+
+  .hero-description {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.25rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Video Section */
+  .video-section {
+    padding: 6rem 0;
+    background: #ffffff;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .video-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-placeholder {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    background: linear-gradient(135deg, #f0f8ff 0%, #f5f9ff 100%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #4a90e2;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .video-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(74, 144, 226, 0.2);
+  }
+
+  .play-button {
+    margin-bottom: 1rem;
+  }
+
+  .video-label {
+    font-family: "Poppins", sans-serif;
+    color: #4a5568;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .video-text h2 {
+    font-family: "Lora", serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 2rem 0;
+  }
+
+  .video-text p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+
+  .cta-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  .cta-button:hover::before {
+    left: 100%;
+  }
+
+  .cta-primary {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+    border: 2px solid #4a90e2;
+  }
+
+  .cta-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
+    border-color: #357abd;
+  }
+
+
+
+  /* Contact Info Section */
+  .contact-info {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f0f8ff 0%, #f5f9ff 100%);
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .info-item {
+    text-align: center;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #f0f8ff 0%, #f5f9ff 100%);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .info-item h3 {
+    font-family: "Lora", serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .info-item p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    color: #4a5568;
+    margin: 0;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+    }
+
+    .video-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .video-text h2 {
+      font-size: 2rem;
+    }
+
+    
+
+    .info-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-hero {
+      padding: 4rem 0;
+    }
+
+         .video-section,
+     .contact-info {
+       padding: 4rem 0;
+     }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .container {
+      padding: 0 1rem;
+    }
+
+    
+
+    .video-placeholder {
+      height: 250px;
+    }
+
+    .info-item {
+      padding: 1.5rem;
+    }
+  }
+</style>
