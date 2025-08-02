@@ -3,6 +3,14 @@
     <div class="chairs-hero-content">
       <h1>Party Chairs</h1>
       <p>Quality seating solutions for every event</p>
+      <div class="cta-buttons-container">
+        <a href="/chairs/" class="cta-button-gradient">
+          <span class="button-text">View Tables</span>
+        </a>
+        <a href="/jumpers/" class="cta-button-outline">
+          <span class="button-text">View Jumpers</span>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -334,12 +342,72 @@
 </section>
 
 <style>
+  /* Call to Action Buttons Styles */
+  .cta-buttons-section {
+    background: #f8f9fa;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .cta-buttons-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cta-button-gradient {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fafafa;
+    color: #667eea;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  }
+
+  .cta-button-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  }
+
+  .cta-button-outline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #fafafa;
+    padding: 1rem 2rem;
+    border: 2px solid #fafafa;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button-outline:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  }
   .chairs-page {
     min-height: 100vh;
   }
 
   .chairs-hero {
-    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    /* background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%); */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 6rem 0;
     text-align: center;
