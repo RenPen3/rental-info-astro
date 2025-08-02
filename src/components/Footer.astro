@@ -1,5 +1,7 @@
 ---
 // Footer component for Raul's Party Rental
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear().toString();
 ---
 
 <footer class="footer">
@@ -176,7 +178,7 @@
     <div class="footer-bottom">
       <div class="footer-bottom-content">
         <p class="copyright">
-          © 2025 Arielle's Party Rentals. All rights reserved.
+          © {currentYear} Arielle's Party Rentals. All rights reserved.
         </p>
         <div class="footer-bottom-links">
           <a href="/privacy/" class="bottom-link">Privacy Policy</a>
