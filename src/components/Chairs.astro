@@ -4,38 +4,60 @@ const chairs = [
     imageURL: "https://i.ibb.co/ksVs5wfp/chair-1.webp",
     alt: "Plastic Chair",
     title: "Basic White Folding Chair",
-    description: "Durable and lightweight plastic chairs perfect for outdoor events,backyard parties, and casual gatherings. Easy to clean and stack for storage.",
+    description:
+      "Durable and lightweight plastic chairs perfect for outdoor events,backyard parties, and casual gatherings. Easy to clean and stack for storage.",
+    price: "1.00",
+    price2: "1.50",
   },
   {
     imageURL: "https://i.ibb.co/YB3vY7wP/chair-2.webp",
     alt: "Banquet Chair",
     title: "White Padded Folding Chair",
-    description: "Classic folding chairs with padded seats for comfort. Perfect for indoor events, meetings, and formal gatherings. Compact when folded.",
+    description:
+      "Classic folding chairs with padded seats for comfort. Perfect for indoor events, meetings, and formal gatherings. Compact when folded.",
+    price: "2.75",
   },
   {
     imageURL: "https://i.ibb.co/rKDf1QnF/chair-6.webp",
     alt: "Gold Chiavari Chair",
     title: "Gold Chiavari Chair",
-    description: " Make a statement with our Single Throne Gold Chair — a regal, upholstered banquet chair designed for elegance and comfort. Perfect for weddings, corporate events, and formal occasions.",
+    description:
+      " Make a statement with our Single Throne Gold Chair — a regal, upholstered banquet chair designed for elegance and comfort. Perfect for weddings, corporate events, and formal occasions.",
+    price: "5.00",
+    price2: "5.25",
   },
   {
     imageURL: "https://i.ibb.co/C3gfScFh/chair-3.webp",
     alt: "Single Throne Gold Chair",
     title: "Single Throne Gold Chair",
-    description: "Make a statement with our Single Throne Gold Chair — a regal, upholstered banquet chair designed for elegance and comfort. Perfect for weddings, corporate events, and formal occasions.",
+    description:
+      "Make a statement with our Single Throne Gold Chair — a regal, upholstered banquet chair designed for elegance and comfort. Perfect for weddings, corporate events, and formal occasions.",
+    price: "100.00",
+  },
+  {
+    imageURL: "https://i.ibb.co/95zVgqh/brwn-chair-Opt.webp",
+    alt: "Wood Grain Resin Chair",
+    title: "Wood Grain Resin Chair",
+    description:
+      "This wood-grain resin chair brings durability. Featuring a soft padded seat for added comfort, it's perfect for any event, offering style and support.",
+    price: "3.50",
   },
   {
     imageURL: "https://i.ibb.co/FLwV46nF/chair-5.webp",
     alt: "White Couples Throne Chair",
     title: "White Couples Throne Chair",
-    description: "Make a grand statement with our White Couples Throne Chair, featuring elegant detailing and plush padding for comfort and style. Perfect for weddings, anniversaries, and romantic celebrations.",
+    description:
+      "Make a grand statement with our White Couples Throne Chair, featuring elegant detailing and plush padding for comfort and style. Perfect for weddings, anniversaries, and romantic celebrations.",
+    price: "250.00",
   },
   {
     imageURL: "https://i.ibb.co/0jzv8Kq4/chair-4.webp",
     alt: "Couples Throne Gold Chair",
     title: "Couples Throne Gold Chair",
-    description: "Make a grand statement with our White Couples Throne Chair, featuring elegant detailing and plush padding for comfort and style. Perfect for weddings, anniversaries, and romantic celebrations.",
-  }
+    description:
+      "Make a grand statement with our White Couples Throne Chair, featuring elegant detailing and plush padding for comfort and style. Perfect for weddings, anniversaries, and romantic celebrations.",
+    price: "150.00",
+  },
 ];
 ---
 
@@ -58,53 +80,65 @@ const chairs = [
   <div class="chairs-container">
     <!-- Plastic Chair -->
     <section class="chair-section">
-      {chairs.map((chair) => 
-      <div class="chair-content">
-        <div class="chair-image">
-          <img
-            src={chair.imageURL}
-            alt={chair.alt}
-          />
-        </div>
-        <div class="chair-details">
-          <h2>{chair.title}</h2>
-          <p class="chair-description">{chair.description}</p>
+      {
+        chairs.map((chair) => (
+          <div class="chair-content">
+            <div class="chair-image">
+              <img src={chair.imageURL} alt={chair.alt} />
+            </div>
+            <div class="chair-details">
+              <h2>{chair.title}</h2>
+              <p class="chair-description">{chair.description}</p>
 
-          <div class="chair-specs">
-            <h3>Specifications</h3>
-            <ul>
-              <li><strong>Material:</strong> High-density polyethylene</li>
-              <li><strong>Weight Capacity:</strong> 300 lbs</li>
-              <li><strong>Dimensions:</strong> W: 18in × D: 20in × H: 32in</li>
-              <li><strong>Seat Height:</strong> 18"</li>
-              <li><strong>Weight:</strong> 4.5 lbs</li>
-              <li><strong>Stackable:</strong> Yes (up to 20 chairs)</li>
-            </ul>
-          </div>
+              {/* <div class="chair-specs">
+                <h3>Specifications</h3>
+                <ul>
+                  <li>
+                    <strong>Material:</strong> High-density polyethylene
+                  </li>
+                  <li>
+                    <strong>Weight Capacity:</strong> 300 lbs
+                  </li>
+                  <li>
+                    <strong>Dimensions:</strong> W: 18in × D: 20in × H: 32in
+                  </li>
+                  <li>
+                    <strong>Seat Height:</strong> 18"
+                  </li>
+                  <li>
+                    <strong>Weight:</strong> 4.5 lbs
+                  </li>
+                  <li>
+                    <strong>Stackable:</strong> Yes (up to 20 chairs)
+                  </li>
+                </ul>
+              </div> */}
 
-          <div class="chair-pricing">
-            <h3>Pricing</h3>
-            <div class="price-options">
-              <div class="price-option">
-                <span class="price">$1.00</span>
-                <span class="period">per chair/day</span>
-              </div>
-              <div class="price-option">
-                <span class="price">$1.50</span>
-                <span class="period">new chair - per chair/day</span>
-              </div>
-              <!-- <div class="price-option">
-                  <span class="price">$35.00</span>
-                  <span class="period">per chair/week</span>
-                </div> -->
+              {(chair.price || chair.price2) && (
+                <div class="chair-pricing">
+                  <h3>Pricing</h3>
+                  <div class="price-options">
+                    {chair.price && (
+                      <div class="price-option">
+                        <span class="price">${chair.price}</span>
+                        <span class="period">per chair/day</span>
+                      </div>
+                    )}
+                    {chair.price2 && (
+                      <div class="price-option">
+                        <span class="price">${chair.price2}</span>
+                        <span class="period">new chair - per chair/day</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* <button class="rent-btn">Rent This Chair</button> */}
             </div>
           </div>
-
-          <!-- <button class="rent-btn">Rent This Chair</button> -->
-        </div>
-      </div>
-    
-    )}
+        ))
+      }
       <!-- <div class="chair-content">
         <div class="chair-image">
           <img
@@ -147,16 +181,14 @@ const chairs = [
                   <span class="price">$35.00</span>
                   <span class="period">per chair/week</span>
                 </div> -->
-            </div>
-          </div>
-
-          <!-- <button class="rent-btn">Rent This Chair</button> -->
-        </div>
-      </div>
     </section>
+  </div>
 
-    <!-- Folding Chair -->
-    <!-- <section id="chair-2" class="chair-section">
+  <!-- <button class="rent-btn">Rent This Chair</button> -->
+</section>
+
+<!-- Folding Chair -->
+<!-- <section id="chair-2" class="chair-section">
       <div class="chair-content">
         <div class="chair-image">
           <img
@@ -208,8 +240,8 @@ const chairs = [
       </div>
     </section> -->
 
-    <!-- Chiavari Chair -->
-    <!-- <section class="chair-section">
+<!-- Chiavari Chair -->
+<!-- <section class="chair-section">
       <div class="chair-content">
         <div class="chair-image">
           <img
@@ -266,8 +298,8 @@ const chairs = [
       </div>
     </section> -->
 
-    <!-- Single Throne Gold Chair -->
-    <!-- <section class="chair-section">
+<!-- Single Throne Gold Chair -->
+<!-- <section class="chair-section">
       <div class="chair-content">
         <div class="chair-image">
           <img
@@ -319,8 +351,8 @@ const chairs = [
       </div>
     </section> -->
 
-    <!-- White Couples Throne Chair -->
-    <!-- <section class="chair-section">
+<!-- White Couples Throne Chair -->
+<!-- <section class="chair-section">
       <div class="chair-content">
         <div class="chair-image">
           <img
@@ -373,8 +405,8 @@ const chairs = [
       </div>
     </section> -->
 
-    <!-- Couples Throne Gold Chair -->
-    <!-- <section class="chair-section">
+<!-- Couples Throne Gold Chair -->
+<!-- <section class="chair-section">
       <div class="chair-content">
         <div class="chair-image">
           <img
@@ -426,8 +458,6 @@ const chairs = [
         </div>
       </div>
     </section> -->
-  </div>
-</section>
 
 <style>
   /* Call to Action Buttons Styles */
@@ -490,10 +520,22 @@ const chairs = [
     box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
   }
 
-  .chair-content:nth-child(even) {direction: rtl;}
+  .chair-content {
+    margin-bottom: 5em;
+  }
 
-  .chair-details {margin-bottom: 4em}
+  .chair-content:nth-child(even) {
+    direction: rtl;
+    text-align: left;
+  }
 
+  .price-options:nth-child(even) {
+    direction: ltr;
+  }
+
+  .chair-details {
+    margin-bottom: 4em;
+  }
 
   /* Responsive CTA Buttons */
 
@@ -544,7 +586,6 @@ const chairs = [
 
   /* Mobile (up to 767px) */
   @media (max-width: 767px) {
-   
     .cta-buttons-container {
       max-width: 100%;
       flex-direction: column;
@@ -567,7 +608,9 @@ const chairs = [
       transform: none;
     }
 
-    .chair-details {text-align: left;}
+    .chair-details {
+      text-align: left;
+    }
   }
 
   /* Small Mobile (up to 480px) */
@@ -838,7 +881,7 @@ const chairs = [
     }
 
     .price-option {
-      flex-direction: column;
+      /* flex-direction: column; */
       text-align: center;
       gap: 0.5rem;
     }
